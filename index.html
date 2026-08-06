@@ -16,11 +16,11 @@
 <meta property="og:site_name" content="Findlay Subaru of Las Vegas" />
 <meta property="og:image" content="brz-hero.webp" />
 <meta property="og:image:width" content="1920" />
-<meta property="og:image:height" content="1080" />
+<meta property="og:image:height" content="1040" />
 <meta property="og:locale" content="en_US" />
-<meta property="article:published_time" content="2026-06-01T00:00:00-07:00" />
-<meta property="article:modified_time" content="2026-08-05T00:00:00-07:00" />
-<meta property="article:author" content="Findlay Subaru Sales Team" />
+<meta property="article:published_time" content="2026-09-01T00:00:00-07:00" />
+<meta property="article:modified_time" content="2026-09-01T00:00:00-07:00" />
+<meta property="article:author" content="Findlay Subaru of Las Vegas team" />
 <meta property="article:section" content="New Inventory" />
 
 <!-- Twitter / X -->
@@ -30,8 +30,8 @@
 <meta name="twitter:image" content="brz-hero.webp" />
 
 <!-- Favicon -->
-<link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" href="https://dealerinspire-shared-assets.s3.amazonaws.com/public/oem/subaru/general/favicon.png" />
+<link rel="apple-touch-icon" href="https://dealerinspire-shared-assets.s3.amazonaws.com/public/oem/subaru/general/favicon.png" />
 
 <!-- Preload hero image for faster LCP -->
 <link rel="preload" as="image" href="brz-hero.webp" fetchpriority="high" />
@@ -43,15 +43,19 @@
   "@graph": [
     {
       "@type": "Article",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": ["h1", ".deck", "h2"]
+      },
       "@id": "https://www.subaruoflasvegas.com/brz-for-sale-near-me-new/#article",
       "headline": "BRZ For Sale Near Me | Findlay Subaru Las Vegas",
       "description": "Searching BRZ for sale near me in Las Vegas points you to Findlay Subaru at 6455 Roy Horn Way. What to check before you buy a Subaru BRZ, how it fits next to other Subaru models, and how a local BRZ purchase works.",
       "image": "brz-hero.webp",
-      "datePublished": "2026-06-01T00:00:00-07:00",
-      "dateModified": "2026-08-05T00:00:00-07:00",
+      "datePublished": "2026-09-01T00:00:00-07:00",
+      "dateModified": "2026-09-01T00:00:00-07:00",
       "author": {
         "@type": "Organization",
-        "name": "Findlay Subaru Sales Team",
+        "name": "Findlay Subaru of Las Vegas team",
         "url": "https://www.subaruoflasvegas.com/"
       },
       "publisher": {
@@ -133,10 +137,12 @@
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.7",
-        "reviewCount": 3672
+        "reviewCount": 3672,
+        "bestRating": "5"
       },
       "award": [
         "2023 Subaru Love Promise Retailer of the Year",
+        "2026 Subaru Love Promise Heart Award",
         "Subaru Customer Commitment Award (2018-2023)",
         "DealerRater Nevada State Dealer of the Year (Consumer Satisfaction)",
         "CarEdge Dealer Transparency Grade A (91/100)"
@@ -155,7 +161,14 @@
         { "@type": "PropertyValue", "name": "Body style", "value": "2-door coupe" },
         { "@type": "PropertyValue", "name": "Transmissions", "value": "Manual and automatic" },
         { "@type": "PropertyValue", "name": "Availability", "value": "New and Subaru Certified Pre-Owned" }
-      ]
+      ],
+      "offers": {
+        "@type": "AggregateOffer",
+        "availability": "https://schema.org/InStock",
+        "priceCurrency": "USD",
+        "url": "https://www.subaruoflasvegas.com/new-vehicles/",
+        "seller": { "@id": "https://www.subaruoflasvegas.com/#dealer" }
+      }
     },
     {
       "@type": "FAQPage",
@@ -163,7 +176,7 @@
         "@type": "Organization",
         "name": "Findlay Subaru"
       },
-      "datePublished": "2026-06-01",
+      "datePublished": "2026-09-01",
       "mainEntity": [
         {
           "@type": "Question",
@@ -268,14 +281,11 @@
     width: 100%;
     position: relative;
   }
-  /* Fallback for older iOS Safari that doesn't support overflow-x: clip */
   @supports not (overflow-x: clip) {
     html, body { overflow-x: hidden; }
   }
-  /* Universal protection: never let media or content force horizontal scroll */
   img, video, iframe, svg, picture { max-width: 100%; height: auto; display: block; }
   pre, code, table { max-width: 100%; overflow-x: auto; }
-  /* Prevent long unbreakable strings (URLs, etc.) from forcing overflow */
   p, h1, h2, h3, h4, h5, h6, li, dt, dd, td, th { overflow-wrap: break-word; word-wrap: break-word; }
   img { display: block; max-width: 100%; }
   a { color: var(--blue-deep); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
@@ -283,27 +293,10 @@
 
   /* ---------- Layout primitives ---------- */
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 32px; }
-  main.wrap { max-width: 1320px; }
   .col   { max-width: var(--col); margin: 0 auto; }
 
-  /* ---------- Top kicker bar (no header/nav, just brand crumb) ---------- */
-  .kicker-bar {
-    border-bottom: 1px solid var(--rule);
-    background: var(--paper);
-    padding: 18px 0 16px;
-    font-size: 12px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .kicker-bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-  .kicker-bar .crumbs { display: flex; align-items: center; gap: 12px; }
-  .kicker-bar .crumbs span.dot { width: 4px; height: 4px; border-radius: 50%; background: var(--blue); display: inline-block; }
-  .kicker-bar .meta-right { display: flex; align-items: center; gap: 18px; }
-  .kicker-bar .meta-right strong { color: var(--ink); font-weight: 600; letter-spacing: 0.16em; }
-
   /* ---------- HERO ---------- */
-  .hero { padding: 56px 0 0; border-bottom: 1px solid var(--rule); }
+  .hero { padding: 56px 0 0; }
   .hero .eyebrow {
     display: inline-flex; align-items: center; gap: 10px;
     font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
@@ -321,8 +314,7 @@
     color: var(--ink);
     text-wrap: balance;
   }
-  .hero h1 em { font-style: normal; font-weight: 700; color: var(--blue); }
-  .hero h1 .num { font-feature-settings: "lnum"; font-weight: 700; }
+  .hero h1 .accent { font-style: normal; font-weight: 700; color: var(--blue); }
   .hero .deck {
     font-size: 22px; line-height: 1.45; max-width: 760px;
     color: var(--ink-soft); font-weight: 400;
@@ -359,10 +351,10 @@
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    margin-top: 24px;
+    margin-top: 56px;
     border: none;
     border-radius: 0;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 21 / 8;
     max-width: 100vw;
   }
   @media (max-width: 760px) {
@@ -381,7 +373,6 @@
     background: repeating-linear-gradient(0deg, transparent 0 6px, rgba(25,113,212,.03) 6px 7px);
     pointer-events: none;
   }
-  /* Stylized desert + Outback silhouette */
   .hero-photo svg.scene { position: absolute; inset: 0; width: 100%; height: 100%; }
   .hero-photo img.scene {
     position: absolute; inset: 0;
@@ -412,11 +403,14 @@
   /* ---------- Article body grid (sticky TOC + column) ---------- */
   .article-grid {
     display: grid;
-    grid-template-columns: 200px minmax(0, 1fr) 280px;
-    gap: 48px 80px;
+    grid-template-columns: 180px minmax(16px, 1fr) minmax(0, 600px) minmax(16px, 1fr) 240px;
+    column-gap: 40px;
+    row-gap: 64px;
     padding: 56px 0 0;
   }
-  .article-grid > .body { max-width: 720px; margin: 0 auto; min-width: 0; }
+  .article-grid > .toc { grid-column: 1; }
+  .article-grid > .body { grid-column: 3; max-width: 100%; margin: 0; }
+  .article-grid > .gutter { grid-column: 5; width: 100%; }
 
   /* TOC */
   .toc {
@@ -453,13 +447,12 @@
   .toc a:hover, .toc li.active a { color: var(--blue); }
   .toc li.active a::before { color: var(--blue); }
 
-  /* Subtle scrollbar for internal-scrolling sticky elements */
   .toc::-webkit-scrollbar, .gutter::-webkit-scrollbar { width: 4px; }
   .toc::-webkit-scrollbar-thumb, .gutter::-webkit-scrollbar-thumb { background: var(--rule); border-radius: 4px; }
   .toc::-webkit-scrollbar-track, .gutter::-webkit-scrollbar-track { background: transparent; }
   .toc, .gutter { scrollbar-width: thin; scrollbar-color: var(--rule) transparent; }
 
-  /* Right-side gutter (pull quotes, trust chips) */
+  /* Right-side gutter */
   .gutter {
     align-self: start;
     position: sticky;
@@ -471,20 +464,22 @@
     border: 1px solid var(--rule);
     background: var(--white);
     border-radius: var(--radius-md);
-    padding: 18px;
+    padding: 22px 20px;
     font-size: 13px;
     line-height: 1.5;
-    margin: 0 auto 24px auto;
-    min-width: 0;
-    max-width: 240px;
-    width: 100%;
-    overflow-wrap: break-word;
+    margin-bottom: 22px;
   }
-  .gutter .chip:last-child { margin-bottom: 0; }
   .gutter .chip .lbl { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
   .gutter .chip .stars { color: var(--blue); letter-spacing: 2px; font-size: 14px; margin-bottom: 4px; }
   .gutter .chip strong { font-family: var(--display); font-size: 28px; font-weight: 500; color: var(--ink); display: block; line-height: 1; }
   .gutter .chip .sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  .gutter .chip a.cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 12px; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.04em; color: var(--blue-deep); text-decoration: none;
+    border-bottom: 1px solid currentColor; padding-bottom: 1px;
+  }
+  .gutter .chip a.cta:hover { color: var(--blue); }
 
   /* ---------- Section + typography ---------- */
   section.s { scroll-margin-top: 32px; padding: 64px 0; border-top: 1px solid var(--rule); }
@@ -519,7 +514,6 @@
     padding: 6px 14px 0 0;
     color: var(--blue);
   }
-  /* Disable drop cap on ledes that start with a digit or symbol, drop caps need a real letter to work */
   p.lede.no-cap::first-letter {
     font-family: inherit;
     font-weight: inherit;
@@ -531,12 +525,14 @@
   }
   p.lede { font-size: 19px; line-height: 1.55; color: var(--ink-soft); margin-bottom: 28px; }
 
-  ul.bullets { padding-left: 20px; margin: 0 0 28px; }
-  ul.bullets li { margin: 10px 0; line-height: 1.6; }
+  ul.bullets { list-style: none; padding-left: 0; margin: 0 0 28px; }
+  .bullets li { position: relative; margin: 12px 0; line-height: 1.6; padding-left: 26px; }
+  .bullets li::before { content: ""; position: absolute; left: 0; top: 9px; width: 8px; height: 8px; border-radius: 2px; background: var(--blue); }
+  ul
 
   blockquote.pull {
-    margin: 40px -32px;
-    padding: 32px 40px;
+    margin: 40px 0;
+    padding: 32px 0;
     border-top: 2px solid var(--blue);
     border-bottom: 1px solid var(--rule);
     font-family: var(--display);
@@ -584,61 +580,66 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
     margin: 40px 0 12px;
-    border-top: 1px solid var(--ink);
-    border-bottom: 1px solid var(--ink);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-md);
   }
   .trim {
     padding: 32px 26px 30px;
-    display: flex; flex-direction: column; gap: 10px;
+    display: grid;
+    grid-template-rows: auto calc(26px * 1.15 * 3) 1fr;
+    row-gap: 20px;
+    text-align: center;
     position: relative;
     border-right: 1px solid var(--rule);
     border-bottom: 1px solid var(--rule);
   }
   .trim:nth-child(2n) { border-right: none; }
   .trim:nth-last-child(-n+2) { border-bottom: none; }
-  .trim .engine-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 8px; white-space: nowrap; }
+  .trim .engine-row { display: flex; justify-content: center; align-items: baseline; gap: 12px; margin: 0; white-space: nowrap; }
   .trim .engine { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); font-weight: 700; }
-  .trim.wilderness .engine { color: var(--blue-deep); }
   .trim .badge { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-  .trim.flagship .badge { color: var(--blue); }
-  .trim .name { font-family: var(--display); font-size: 26px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); line-height: 1.05; margin: 6px 0 12px; min-height: calc(26px * 1.05 * 2); }
-  .trim .equip { font-size: 14px; color: var(--ink-soft); line-height: 1.65; margin: 0; }
+  .trim .name { font-family: var(--display); font-size: 26px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); line-height: 1.15; margin: 0; align-self: start; }
+  .trim .equip { font-size: 14px; color: var(--ink-soft); line-height: 1.65; margin: 0; align-self: start; }
 
   /* ---------- Specs strip ---------- */
   .spec-strip {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0;
     border-top: 1px solid var(--ink);
     border-bottom: 1px solid var(--ink);
     margin: 36px 0 28px;
   }
-  .spec-strip .item { padding: 24px 16px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; min-width: 0; }
+  .spec-strip .item { padding: 28px 28px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; min-width: 0; }
   .spec-strip .item:first-child { padding-left: 0; }
   .spec-strip .item:last-child { border-right: none; padding-right: 0; }
-  .spec-strip .num { font-family: var(--display); font-size: 38px; font-weight: 600; line-height: 1.05; color: var(--blue-deep); letter-spacing: -0.015em; font-feature-settings: "lnum"; min-height: calc(38px * 1.05); margin-bottom: 14px; }
-  .spec-strip .num small { font-size: 14px; color: var(--ink-soft); font-weight: 400; margin-left: 3px; letter-spacing: 0; }
-  .spec-strip .lbl { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-top: 0; line-height: 1.5; min-height: calc(11px * 1.5 * 2); display: flex; align-items: flex-start; }
+  .spec-strip .num { font-family: var(--display); font-size: 34px; font-weight: 500; line-height: 1.1; color: var(--blue-deep); letter-spacing: -0.02em; font-feature-settings: "lnum"; min-height: 42px; white-space: nowrap; }
+  .spec-strip .num small { font-size: 15px; color: var(--ink-soft); font-weight: 400; }
+  .spec-strip .lbl { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
 
-  /* Stats variant: short numeric headers, bigger type, centered */
-  .spec-strip.stats {
-    background: var(--white);
+  /* ---------- Steps list ---------- */
+  .steps { margin: 32px 0; counter-reset: step; padding: 0; list-style: none; }
+  .steps li {
+    counter-increment: step;
+    position: relative;
+    padding: 0 0 24px 56px;
+    border-left: 1px solid var(--rule);
+    margin-left: 18px;
   }
-  .spec-strip.stats .item { align-items: center; text-align: center; padding: 28px 16px; }
-  .spec-strip.stats .item:first-child { padding-left: 16px; }
-  .spec-strip.stats .item:last-child { padding-right: 16px; }
-  .spec-strip.stats .num { font-size: 44px; line-height: 1; min-height: 48px; margin-bottom: 24px; white-space: nowrap; }
-  .spec-strip.stats .num small { font-size: 15px; letter-spacing: 0; margin-left: 4px; }
-  .spec-strip.stats .lbl { min-height: calc(11px * 1.5 * 5); display: flex; align-items: flex-start; justify-content: center; text-align: center; }
+  .steps li:last-child { padding-bottom: 0; border-left: 1px solid transparent; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute; left: -18px; top: -4px;
+    width: 36px; height: 36px;
+    background: var(--blue); color: var(--white);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--display); font-size: 16px; font-weight: 600;
+  }
+  .steps li h4 { font-family: var(--display); font-size: 19px; font-weight: 600; margin: 0 0 6px; color: var(--ink); line-height: 1.25; }
+  .steps li p { margin: 0; font-size: 15px; color: var(--ink-soft); line-height: 1.6; }
 
-  /* Centered variant: center the number and label within each cell (no breakout, default sizing) */
-  .spec-strip.centered .item { align-items: center; text-align: center; padding: 24px 16px; }
-  .spec-strip.centered .item:first-child { padding-left: 16px; }
-  .spec-strip.centered .item:last-child { padding-right: 16px; }
-  .spec-strip.centered .num { text-align: center; }
-  .spec-strip.centered .lbl { justify-content: center; text-align: center; }
-
-  /* ---------- Safety badge ---------- */
+  /* ---------- Safety / pricing banner ---------- */
   .safety-banner {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -668,24 +669,7 @@
   .safety-banner .copy h4 { font-family: var(--display); font-size: 26px; font-weight: 500; line-height: 1.2; margin: 0 0 12px; color: var(--ink); }
   .safety-banner .copy p { margin: 0; color: var(--ink-soft); font-size: 15px; line-height: 1.65; }
 
-  /* ---------- Vegas drive-time list ---------- */
-  .drives {
-    border-top: 1px solid var(--rule);
-    margin: 28px 0;
-  }
-  .drives .row {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: 24px;
-    align-items: baseline;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--rule);
-  }
-  .drives .place { font-family: var(--display); font-size: 19px; font-weight: 500; color: var(--ink); }
-  .drives .dist { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-variant-numeric: tabular-nums; }
-  .drives .time { font-family: var(--display); font-size: 22px; font-weight: 500; color: var(--blue-deep); font-variant-numeric: tabular-nums; min-width: 110px; text-align: right; }
-
-  /* ---------- Cargo / family imagery placeholder ---------- */
+  /* ---------- Cargo / family imagery ---------- */
   .full-img {
     aspect-ratio: 16/9;
     border-radius: var(--radius-md);
@@ -730,6 +714,543 @@
     z-index: 2;
   }
 
+  /* ---------- Why Findlay band ---------- */
+  .findlay-band {
+    background: var(--ink);
+    color: var(--white);
+    margin: 56px 0 0;
+    padding: 72px 0 64px;
+    border-radius: var(--radius-md);
+    position: relative;
+    overflow: hidden;
+  }
+  .findlay-band::before {
+    content: "";
+    position: absolute; right: -10%; top: -30%;
+    width: 60%; aspect-ratio: 1;
+    background: radial-gradient(circle at center, rgba(25,113,212,.4), rgba(25,113,212,0) 60%);
+    pointer-events: none;
+  }
+  .findlay-band .wrap { position: relative; }
+  .findlay-band .eyebrow { color: #6db3ff; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 24px; font-weight: 600; }
+  .findlay-band h2 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(34px, 4.4vw, 54px); line-height: 1.05; letter-spacing: -0.025em;
+    margin: 0 0 20px; max-width: 720px; text-wrap: balance;
+  }
+  .findlay-band h2 em { font-style: normal; color: #9cc8ff; font-weight: 700; }
+  .findlay-band .band-deck {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 1.5;
+    color: rgba(255,255,255,.78);
+    max-width: 620px;
+    margin: 0 0 24px;
+  }
+  .trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,.15);
+  }
+  .trust-grid .item {
+    padding: 8px 28px 8px 0;
+    border-right: 1px solid rgba(255,255,255,.12);
+  }
+  .trust-grid .item:last-child { border-right: none; }
+  .trust-grid .item:not(:first-child) { padding-left: 28px; }
+  .trust-grid .item .num { font-family: var(--display); font-size: 56px; font-weight: 500; line-height: 1; color: var(--white); letter-spacing: -0.02em; font-feature-settings: "lnum"; }
+  .trust-grid .item .num small { font-size: 22px; color: #9cc8ff; }
+  .trust-grid .item .lbl { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-top: 16px; line-height: 1.55; }
+
+  .findlay-extras {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 48px;
+    margin-top: 56px;
+  }
+  .findlay-extras h5 { font-family: var(--display); font-size: 20px; font-weight: 500; margin: 0 0 20px; color: var(--white); padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.12); }
+  .findlay-extras p { color: rgba(255,255,255,.75); font-size: 14px; line-height: 1.7; margin: 0 0 16px; }
+  .findlay-extras p:last-child { margin-bottom: 0; }
+  .findlay-extras strong { color: var(--white); font-weight: 600; }
+
+  /* ---------- FAQ accordion ---------- */
+  .faq { margin: 28px 0; }
+  .faq details {
+    border-top: 1px solid var(--ink);
+    padding: 22px 0;
+  }
+  .faq details:last-of-type { border-bottom: 1px solid var(--ink); }
+  .faq summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex; align-items: baseline; gap: 18px;
+    font-family: var(--display);
+    font-size: 22px; font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::before {
+    content: "+";
+    font-family: var(--sans);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--blue);
+    width: 24px; flex: none;
+    transition: transform .2s ease;
+    line-height: 1;
+  }
+  .faq details[open] summary::before { content: "–"; }
+  .faq .answer {
+    padding: 20px 0 8px 42px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    max-width: 660px;
+  }
+  .faq .answer p { margin: 0 0 16px; }
+  .faq .answer p:last-child { margin-bottom: 0; }
+
+  /* ---------- Inline CTA card ---------- */
+  .cta-inline {
+    background: var(--blue-deep);
+    color: var(--white);
+    border-radius: var(--radius-md);
+    padding: 48px 48px 44px;
+    margin: 48px 0;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .cta-inline::before {
+    content: "2026";
+    position: absolute;
+    right: -20px; bottom: -60px;
+    font-family: var(--display);
+    font-size: 320px; font-weight: 700;
+    letter-spacing: -0.04em;
+    color: rgba(255,255,255,.05);
+    line-height: 0.8;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .cta-inline > * { position: relative; z-index: 1; }
+  .cta-inline .eyebrow {
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: #9cc8ff; font-weight: 700;
+    margin-bottom: 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .cta-inline .eyebrow::before { content: none; }
+  .cta-inline h3 {
+    font-family: var(--display); font-size: clamp(32px, 3.4vw, 44px);
+    font-weight: 700; margin: 0 0 14px; color: var(--white);
+    line-height: 1.05; letter-spacing: -0.025em;
+    max-width: 720px; text-wrap: balance;
+  }
+  .cta-inline .lede {
+    margin: 0 0 28px; color: rgba(255,255,255,.78);
+    font-size: 15px; max-width: 540px; line-height: 1.55;
+  }
+  .cta-inline .actions {
+    display: flex; gap: 10px; flex-wrap: wrap;
+    align-items: center;
+  }
+  .cta-inline .meta {
+    display: flex; gap: 28px; flex-wrap: wrap;
+    margin-top: 28px; padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,.14);
+  }
+  .cta-inline .meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .cta-inline .meta-item .k { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,.5); font-weight: 600; }
+  .cta-inline .meta-item .v { font-size: 14px; color: var(--white); font-weight: 500; }
+  .cta-inline .meta-item .v a { color: var(--white); }
+  @media (max-width: 760px) {
+    .cta-inline { padding: 36px 28px 32px; margin: 40px 0; }
+    .cta-inline::before { font-size: 200px; right: -10px; bottom: -30px; }
+    .cta-inline .meta { gap: 18px; }
+  }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 22px;
+    border-radius: var(--radius-pill);
+    font-size: 13px; font-weight: 600;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
+    white-space: nowrap;
+  }
+  .btn.primary { background: var(--white); color: var(--blue-deep); }
+  .btn.primary:hover { background: var(--paper-2); color: var(--blue-deep); }
+  .btn.ghost { color: var(--white); border-color: rgba(255,255,255,.5); }
+  .btn.ghost:hover { background: rgba(255,255,255,.1); border-color: var(--white); }
+  .btn .arrow { transition: transform .2s ease; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ---------- Sources ---------- */
+  .sources {
+    background: var(--paper-2);
+    padding: 48px 0;
+    margin-top: 56px;
+    border-top: 1px solid var(--rule);
+  }
+  .sources h3 { font-family: var(--display); font-size: 28px; font-weight: 500; margin: 0 0 8px; }
+  .sources .meta-line { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 28px; }
+  .sources .ext {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px;
+    list-style: none; padding: 0; margin: 0;
+    font-size: 14px;
+  }
+  .sources .ext li { padding: 10px 0; border-top: 1px solid var(--rule); display: flex; gap: 10px; align-items: baseline; }
+  .sources .ext li::before { content: "↗"; color: var(--blue); font-size: 12px; }
+
+  /* ---------- Closing CTA ---------- */
+  .closing-cta {
+    padding: 72px 0 88px;
+    text-align: center;
+    background: var(--paper-2);
+    border-top: 1px solid var(--rule);
+  }
+  .closing-cta h2 {
+    font-family: var(--display); font-weight: 700;
+    font-size: clamp(36px, 5vw, 64px);
+    line-height: 1.05; letter-spacing: -0.03em;
+    margin: 0 0 20px; text-wrap: balance;
+  }
+  .closing-cta h2 em { font-style: normal; color: var(--blue); font-weight: 700; }
+  .closing-cta p { font-size: 19px; color: var(--ink-soft); max-width: 560px; margin: 0 auto 36px; line-height: 1.55; }
+  .closing-cta .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .closing-cta .btn.primary { background: var(--blue); color: var(--white); border-color: var(--blue); }
+  .closing-cta .btn.primary:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
+  .closing-cta .btn.ghost { color: var(--ink); border-color: var(--ink); }
+  .closing-cta .btn.ghost:hover { background: var(--ink); color: var(--white); }
+  .closing-cta .visit { margin-top: 32px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
+  .closing-cta .visit strong { color: var(--ink); font-family: var(--display); font-size: 20px; letter-spacing: 0; display: block; font-weight: 500; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1100px) {
+    .article-grid { grid-template-columns: 200px minmax(0, 1fr); column-gap: 48px; row-gap: 48px; }
+    .article-grid > .body { grid-column: 2; max-width: 100%; }
+    .gutter { display: none; }
+    .trust-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+    .trust-grid .item { padding: 24px 24px 24px 0 !important; border-right: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12); }
+    .trust-grid .item:not(:first-child) { padding-left: 0 !important; }
+    .trust-grid .item:nth-child(2) { padding-left: 24px !important; border-right: none; }
+    .trust-grid .item:nth-child(3) { padding-left: 0 !important; border-bottom: none; }
+    .trust-grid .item:nth-child(4) { padding-left: 24px !important; border-right: none; border-bottom: none; }
+    .findlay-extras { gap: 36px; }
+  }
+  @media (max-width: 1100px) {
+    .trims { grid-template-columns: repeat(2, 1fr); }
+    .trim:nth-child(3n) { border-right: 1px solid var(--rule); }
+    .trim:nth-child(2n) { border-right: none; }
+    .trim:nth-last-child(-n+3) { border-bottom: 1px solid var(--rule); }
+    .trim:nth-last-child(-n+2) { border-bottom: none; }
+  }
+  @media (max-width: 760px) {
+    .wrap { padding: 0 20px; max-width: 100%; }
+    .article-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 48px; max-width: 100%; }
+    .article-grid > .toc,
+    .article-grid > .body,
+    .article-grid > .gutter { grid-column: 1; max-width: 100%; }
+    .toc { position: static; max-height: none; overflow-y: visible; }
+    .gutter { position: static; max-height: none; overflow-y: visible; }
+    .hero { padding: 36px 0 28px; }
+    .hero h1 { font-size: clamp(32px, 8vw, 44px); }
+    .hero-meta { grid-template-columns: 1fr 1fr; gap: 18px; }
+    section.s { padding: 48px 0; }
+    .trims { grid-template-columns: 1fr; border: none; }
+    .trim { border-right: none !important; border-bottom: 1px solid var(--rule) !important; padding: 28px 0; }
+    .trim:last-child { border-bottom: none !important; }
+    .findlay-extras { grid-template-columns: 1fr; gap: 36px; }
+    .findlay-band { padding: 48px 0 40px; }
+    .findlay-band h2 { font-size: 32px; }
+    .findlay-band .band-deck { font-size: 17px; }
+    .trust-grid { grid-template-columns: 1fr 1fr; padding-top: 36px; margin-top: 44px; }
+    .trust-grid .item { padding: 20px 16px 20px 0 !important; }
+    .trust-grid .item:nth-child(2) { padding-left: 16px !important; }
+    .trust-grid .item:nth-child(3) { padding-left: 0 !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,.12); }
+    .trust-grid .item:nth-child(4) { padding-left: 16px !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,.12); }
+    .trust-grid .item .num { font-size: 40px; }
+    .spec-strip { grid-template-columns: 1fr 1fr; }
+    .spec-strip .item { border-right: none; border-bottom: 1px solid var(--rule); padding: 24px 16px; }
+    .spec-strip .item:nth-child(odd) { padding-left: 0; }
+    .spec-strip .item:nth-child(even) { padding-right: 0; }
+    .glance { padding: 28px; }
+    .glance dl { grid-template-columns: 1fr; }
+    .safety-banner { grid-template-columns: 1fr; padding: 28px; }
+    .cta-inline { grid-template-columns: 1fr; padding: 32px 24px; }
+    .cta-inline .actions { flex-direction: column; }
+    .cta-inline .actions .btn { width: 100%; text-align: center; }
+    .cta-inline .meta { grid-template-columns: 1fr; gap: 14px; }
+    .sources .ext { grid-template-columns: 1fr; }
+    blockquote.pull { margin: 40px 0; padding: 28px 0; }
+    h3 { margin: 36px 0 14px; }
+    h2.section-h { font-size: clamp(26px, 7vw, 36px); }
+    p.lede::first-letter { font-size: 3.4em; padding: 4px 10px 0 0; }
+    .spec-strip .num { font-size: 28px; }
+  }
+
+  /* ---------- Mobile defensive overflow protection ---------- */
+  @media (max-width: 760px) {
+    html, body {
+      overflow-x: hidden !important;
+      max-width: 100vw !important;
+      width: 100% !important;
+    }
+    main, section, article, aside, header, footer, nav, div, figure {
+      max-width: 100% !important;
+    }
+    .wrap, .article-grid, .article-grid > .body, .article-grid > .toc, .article-grid > .gutter {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    .findlay-band, .closing-cta, .findlay-band .wrap, .closing-cta .wrap {
+      max-width: 100% !important;
+    }
+    .trims, .trim {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    .spec-strip { max-width: 100% !important; }
+    .hero-meta { max-width: 100% !important; }
+    blockquote.pull { margin-left: 0 !important; margin-right: 0 !important; }
+    .hero-photo.full-bleed {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    p, h1, h2, h3, h4, h5, h6, li, dd, dt {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    p.lede { hyphens: auto; -webkit-hyphens: auto; }
+  }
+  @media (max-width: 380px) {
+    .wrap { padding: 0 16px !important; }
+    .hero-meta { grid-template-columns: 1fr !important; }
+    .trust-grid { grid-template-columns: 1fr !important; }
+    .trust-grid .item { border-right: none !important; padding-left: 0 !important; }
+    .spec-strip { grid-template-columns: 1fr !important; }
+    .spec-strip .item { padding-right: 0 !important; }
+  }
+
+  /* ---------- Reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .btn:hover .arrow { transform: none; }
+  }
+  /* ---------- Breadcrumbs ---------- */
+  .breadcrumbs{background:var(--paper);padding:18px 0 6px;font-size:12px;letter-spacing:.04em;color:var(--muted)}
+  .breadcrumbs ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+  .breadcrumbs li{display:inline-flex;align-items:center;gap:8px}
+  .breadcrumbs li:not(:first-child)::before{content:"/";color:var(--rule);font-weight:500}
+  .breadcrumbs a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;transition:color .15s ease,border-color .15s ease;padding:4px 0;min-height:32px;display:inline-flex;align-items:center}
+  .breadcrumbs a:hover,.breadcrumbs a:focus{color:var(--blue-deep);border-bottom-color:var(--blue-deep)}
+  .breadcrumbs li[aria-current="page"]{color:var(--ink);font-weight:600}
+  @media (max-width:640px){.breadcrumbs{padding:14px 0 4px;font-size:11px}}
+
+  /* ---------- Accessibility ---------- */
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  .skip-link {
+    position: absolute; top: -40px; left: 8px;
+    background: var(--blue-deep); color: var(--white);
+    padding: 10px 16px; border-radius: var(--radius-sm);
+    text-decoration: none; font-size: 13px; font-weight: 600;
+    z-index: 100; transition: top .2s ease;
+  }
+  .skip-link:focus { top: 8px; color: var(--white); }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+
+  .crumbs{padding:20px 0;font-size:12px;font-weight:400;letter-spacing:.12em;color:rgba(0,0,0,.55);border-bottom:1px solid rgba(0,0,0,.08)}
+  .crumbs .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+  .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px 10px;padding:0;margin:0}
+  .crumbs li{display:inline-flex;align-items:center;gap:10px}
+  .crumbs li + li::before{content:"\203a";color:rgba(0,0,0,.25)}
+  .crumbs a{color:rgba(0,0,0,.65);text-decoration:none}
+  .crumbs a:hover{text-decoration:underline}
+  .crumbs li[aria-current="page"]{color:rgba(0,0,0,.85)}
+
+  /* ---------- Section image (body photo + storytelling caption) ---------- */
+  .section-image figcaption{margin-top:12px;font-size:13px;line-height:1.5;color:#5c6163;display:flex;align-items:flex-start;gap:9px}
+  .section-image figcaption::before{content:"";flex:none;width:7px;height:7px;margin-top:6px;border-radius:50%;background:#0033A0}
+
+  /* collapse gap between two consecutive provenance sections */
+  .sources + .sources{margin-top:0;padding-top:0;border-top:none}
+
+  /* ---------- Findlay vs Traditional comparison ---------- */
+  .vs-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0 8px}
+  .vs-col{border:1px solid var(--rule);border-radius:var(--radius-md);overflow:hidden;background:var(--white)}
+  .vs-head{padding:14px 18px;font-family:var(--display);font-weight:700;font-size:15px;display:flex;align-items:center;gap:9px;letter-spacing:-.01em}
+  .vs-col.ours .vs-head{background:var(--blue);color:#fff}
+  .vs-col.them .vs-head{background:var(--paper);color:var(--ink-soft);border-bottom:1px solid var(--rule)}
+  .vs-list{list-style:none;margin:0;padding:14px 18px 18px}
+  .vs-list li{position:relative;padding:0 0 12px 26px;font-size:14px;line-height:1.45;color:var(--ink-soft)}
+  .vs-list li:last-child{padding-bottom:0}
+  .vs-list li strong{color:var(--ink)}
+  .vs-list li::before{position:absolute;left:0;top:1px;font-size:13px;font-weight:700}
+  .vs-col.ours .vs-list li::before{content:"\2713";color:#1a8f4a}
+  .vs-col.them .vs-list li::before{content:"\0021";color:var(--muted)}
+  .vs-note{font-size:12px;color:var(--muted);margin:6px 0 0}
+  @media (max-width:640px){.vs-wrap{grid-template-columns:1fr}}
+
+  /* ---------- Video embed (independent review) ---------- */
+  .video-embed{margin:32px 0 40px}
+  .video-embed .frame{position:relative;aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;background:var(--ink)}
+  .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video-embed .vcap{font-size:13px;color:var(--muted);line-height:1.5;margin:12px 0 0;padding-left:14px;border-left:3px solid var(--blue)}
+
+  /* ---------- Lot carousel (real dealer photos) + offer ---------- */
+  .lot-offer{border:1px solid var(--rule);border-radius:var(--radius-md);overflow:hidden;background:var(--white);margin:28px 0 8px}
+  .lot-carousel{position:relative;background:var(--ink)}
+  .lot-frame{position:relative;aspect-ratio:4/3;overflow:hidden}
+  .lot-track{display:flex;height:100%;transition:transform .35s ease}
+  .lot-slide{min-width:100%;height:100%}
+  .lot-slide img{width:100%;height:100%;object-fit:cover;display:block}
+  .lot-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border:none;border-radius:50%;background:rgba(20,25,30,.55);backdrop-filter:blur(6px);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .2s,background .2s;z-index:2}
+  .lot-arrow:hover{background:rgba(20,25,30,.8)}
+  .lot-arrow.prev{left:12px}.lot-arrow.next{right:12px}
+  .lot-arrow[disabled]{opacity:0;pointer-events:none}
+  .lot-counter{position:absolute;top:12px;right:12px;background:rgba(20,25,30,.6);backdrop-filter:blur(6px);color:#fff;font-size:12px;letter-spacing:.04em;padding:4px 10px;border-radius:20px;z-index:2}
+  .lot-info{padding:18px 22px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 16px}
+  .lot-info .name{font-family:var(--display);font-weight:700;font-size:18px;color:var(--ink);letter-spacing:-.01em}
+  .lot-info .stock{font-size:12px;color:var(--muted);letter-spacing:.03em}
+  .lot-info .price{font-family:var(--display);font-weight:700;font-size:26px;color:var(--blue-deep);letter-spacing:-.02em}
+  .lot-info .price small{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.02em;text-align:right}
+  .lot-note{padding:0 22px 18px;font-size:12px;color:var(--muted);line-height:1.5}
+  .lot-cta{margin:0 22px 20px}
+
+  /* Visit Us card */
+  .visit-card{border:1px solid var(--rule);border-radius:var(--radius-md);background:var(--paper-2);padding:24px 24px 20px;margin:22px 0 4px}
+  .visit-eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-deep);font-weight:600;margin-bottom:14px}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 28px}
+  .visit-lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+  .visit-val{font-size:16px;line-height:1.4;color:var(--ink);font-weight:500}
+  .visit-note{font-size:13px;color:var(--ink-soft);margin-top:4px}
+  .visit-link{display:inline-block;margin-top:16px;font-size:14px;font-weight:600;color:var(--blue-deep);border-bottom:1px solid currentColor;text-decoration:none}
+  .visit-link .arrow{transition:transform .2s}
+  .visit-link:hover .arrow{transform:translateX(3px)}
+  @media(max-width:520px){.visit-grid{grid-template-columns:1fr}}
+  /* Crosstrek + Hybrid lineup links */
+
+  /* Hero CTA (Prescott-matched) */
+  .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin:0 0 24px}
+  .hero-cta a{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-weight:600;font-size:15px;text-decoration:none;border-radius:999px;padding:13px 26px;transition:background .2s ease,color .2s ease,border-color .2s ease}
+  .hero-cta a.primary{background:var(--blue);color:#fff;border:1px solid var(--blue)}
+  .hero-cta a.primary:hover{background:var(--blue-deep);border-color:var(--blue-deep)}
+  .hero-cta a.secondary{background:transparent;color:var(--blue-deep);border:1px solid var(--rule)}
+  .hero-cta a.secondary:hover{border-color:var(--blue);color:var(--blue)}
+  .hero-cta .arrow{transition:transform .2s ease}
+  .hero-cta a:hover .arrow{transform:translateX(3px)}
+
+  /* Sidebar filled CTA chip (Prescott card style) */
+  .gutter .chip.chip-cta{background:var(--blue);border-color:var(--blue);color:#fff}
+  .gutter .chip.chip-cta .lbl{color:rgba(255,255,255,.75)}
+  .gutter .chip.chip-cta .chip-cta-title{display:block;font-family:var(--display);font-size:21px;line-height:1.2;font-weight:600;color:#fff;margin:2px 0 8px}
+  .gutter .chip.chip-cta .chip-cta-sub{font-size:13px;line-height:1.5;color:rgba(255,255,255,.92);margin-bottom:16px}
+  .chip-cta-btn{display:inline-flex;align-items:center;gap:7px;background:#fff;color:var(--blue-deep);font-family:var(--display);font-weight:600;font-size:14px;padding:11px 20px;border-radius:999px;text-decoration:none;transition:background .15s,color .15s}
+  .chip-cta-btn:hover{background:var(--blue-deep);color:#fff}
+  .chip-cta-btn .arrow{transition:transform .2s}
+  .chip-cta-btn:hover .arrow{transform:translateX(3px)}
+
+
+  /* About band: text + recognition marks */
+  .band-cols{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:center}
+  .band-text .band-deck{margin:0 0 16px}
+  .band-text .band-deck:last-child{margin-bottom:0}
+  .band-deck-sm{font-size:16px;color:rgba(255,255,255,.7)}
+  .band-marks{display:flex;align-items:center;gap:22px}
+  .band-marks .mark{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:14px;width:184px;height:184px;padding:24px;box-shadow:0 6px 24px rgba(0,0,0,.2);transition:transform .2s ease}
+  .band-marks .mark:hover{transform:translateY(-2px)}
+  .band-marks img{display:block;width:auto;height:auto}
+  .band-marks .mark img{width:auto;height:auto}
+  .band-marks .mark:nth-child(1) img{max-width:138px;max-height:146px}
+  .band-marks .mark:nth-child(2) img{max-width:100px;max-height:162px}
+
+  @media(max-width:900px){.band-cols{grid-template-columns:1fr;gap:32px}.band-marks{justify-content:flex-start}}
+  .band-text .band-deck{margin:0 0 16px}
+  .band-text .band-deck:last-child{margin-bottom:0}
+  .band-deck-sm{font-size:16px;color:rgba(255,255,255,.72)}
+
+  /* Sidebar special-offer chip (white, matches the rest of the sidebar) */
+  .chip.chip-offer .offer-model{font-family:var(--display);font-size:15px;font-weight:500;color:var(--ink);line-height:1.25;margin-bottom:6px}
+  .chip.chip-offer .offer-terms{font-size:13px;line-height:1.5;color:var(--ink-soft);margin-top:6px}
+  .chip.chip-offer .cta{display:inline-flex;margin-top:14px}
+
+  /* Gas vs Hybrid quiz */
+  .quiz{margin:40px 0 8px;border:1px solid var(--rule);border-radius:var(--radius-md);background:var(--paper-2);padding:28px 28px 26px}
+  .quiz-eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);font-weight:600;margin-bottom:8px}
+  .quiz-title{font-family:var(--display);font-size:22px;line-height:1.2;color:var(--ink);margin:0 0 8px;font-weight:600}
+  .quiz-sub{font-size:14px;line-height:1.55;color:var(--ink-soft);margin:0 0 22px}
+  .quiz-progress{height:4px;background:#e3e8ec;border-radius:999px;overflow:hidden;margin-bottom:20px}
+  .quiz-bar{display:block;height:100%;background:var(--blue);border-radius:999px;transition:width .3s ease}
+  .quiz-count{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+  .quiz-q{font-family:var(--display);font-size:18px;color:var(--ink);margin-bottom:16px;font-weight:500}
+  .quiz-opts{display:flex;flex-direction:column;gap:10px}
+  .quiz-opt{text-align:left;font-family:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--rule);border-radius:10px;padding:14px 16px;cursor:pointer;transition:border-color .15s,background .15s,transform .1s}
+  .quiz-opt:hover{border-color:var(--blue);background:var(--blue-soft)}
+  .quiz-opt:active{transform:scale(.99)}
+  .quiz-opt:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+  .quiz-result{text-align:left}
+  .quiz-result-img{border-radius:10px;overflow:hidden;aspect-ratio:16/9;margin-bottom:18px;background:#e8edf1}
+  .quiz-result-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .quiz-result-lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-deep);font-weight:600;margin-bottom:8px}
+  .quiz-result-name{font-family:var(--display);font-size:24px;font-weight:600;color:var(--ink);line-height:1.15;margin-bottom:10px}
+  .quiz-result-why{font-size:15px;line-height:1.6;color:var(--ink-soft);margin:0 0 20px}
+  .quiz-result-cta{display:inline-flex;align-items:center;gap:7px;background:var(--blue);color:#fff;font-family:var(--display);font-weight:600;font-size:15px;padding:12px 22px;border-radius:999px;text-decoration:none;transition:background .15s}
+  .quiz .quiz-result-cta,.quiz .quiz-result-cta:hover,.quiz .quiz-result-cta:focus{color:#fff;text-decoration:none}
+  .quiz-result-cta:hover{background:var(--blue-deep)}
+  .quiz-result-cta .arrow{transition:transform .2s}
+  .quiz-result-cta:hover .arrow{transform:translateX(3px)}
+  .quiz-restart{display:block;margin-top:16px;background:none;border:none;color:var(--blue-deep);font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:2px}
+  /* Author / byline (inline, E-E-A-T) */
+  .byline{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:36px 0 40px;font-size:13px;color:var(--muted)}
+  .byline .b-author{color:var(--ink-soft);font-weight:600}
+  .byline .b-rev{color:var(--ink-soft)}
+  .byline .b-rev strong{color:var(--ink);font-weight:600}
+  .byline a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+  .byline a:hover{color:var(--blue)}
+  .byline .b-sep{color:var(--rule);font-weight:300}
+
+
+  /* Stats variant: short numeric headers, bigger type, centered */
+  .spec-strip.stats {
+    background: var(--white);
+  }
+  .spec-strip.stats .item { align-items: center; text-align: center; padding: 28px 16px; }
+  .spec-strip.stats .item:first-child { padding-left: 16px; }
+  .spec-strip.stats .item:last-child { padding-right: 16px; }
+  .spec-strip.stats .num { font-size: 44px; line-height: 1; min-height: 48px; margin-bottom: 24px; white-space: nowrap; }
+  .spec-strip.stats .num small { font-size: 15px; letter-spacing: 0; margin-left: 4px; }
+  .spec-strip.stats .lbl { min-height: calc(11px * 1.5 * 5); display: flex; align-items: flex-start; justify-content: center; text-align: center; }
+
+  /* Centered variant: center the number and label within each cell (no breakout, default sizing) */
+  .spec-strip.centered .item { align-items: center; text-align: center; padding: 24px 16px; }
+  .spec-strip.centered .item:first-child { padding-left: 16px; }
+  .spec-strip.centered .item:last-child { padding-right: 16px; }
+  .spec-strip.centered .num { text-align: center; }
+  .spec-strip.centered .lbl { justify-content: center; text-align: center; }
+
+  /* ---------- Safety badge ---------- */
   /* ---------- Cross-shop comparison table ---------- */
   .cross-table {
     margin: 32px 0;
@@ -897,391 +1418,16 @@
     font-weight: 700;
   }
 
-  /* ---------- Why Findlay band ---------- */
-  .findlay-band {
-    background: var(--ink);
-    color: var(--white);
-    margin: 56px 0 0;
-    padding: 72px 0 64px;
-    border-radius: var(--radius-md);
-    position: relative;
-    overflow: hidden;
-  }
-  .findlay-band::before {
-    content: "";
-    position: absolute; right: -10%; top: -30%;
-    width: 60%; aspect-ratio: 1;
-    background: radial-gradient(circle at center, rgba(25,113,212,.4), rgba(25,113,212,0) 60%);
-    pointer-events: none;
-  }
-  .findlay-band .wrap { position: relative; }
-  .findlay-band .eyebrow { color: #6db3ff; font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 24px; font-weight: 600; }
-  .findlay-band h2 {
-    font-family: var(--display); font-weight: 700;
-    font-size: clamp(34px, 4.4vw, 54px); line-height: 1.05; letter-spacing: -0.025em;
-    margin: 0 0 20px; max-width: 720px; text-wrap: balance;
-  }
-  .findlay-band h2 em { font-style: normal; color: #9cc8ff; font-weight: 700; }
-  .findlay-band .band-deck {
-    font-family: var(--display);
-    font-weight: 400;
-    font-size: 19px;
-    line-height: 1.5;
-    color: rgba(255,255,255,.78);
-    max-width: 620px;
-    margin: 0 0 24px;
-  }
-  .trust-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    margin-top: 48px;
-    padding-top: 40px;
-    border-top: 1px solid rgba(255,255,255,.15);
-  }
-  .trust-grid .item {
-    padding: 8px 28px 8px 0;
-    border-right: 1px solid rgba(255,255,255,.12);
-  }
-  .trust-grid .item:last-child { border-right: none; }
-  .trust-grid .item:not(:first-child) { padding-left: 28px; }
-  .trust-grid .item .num { font-family: var(--display); font-size: 56px; font-weight: 500; line-height: 1; color: var(--white); letter-spacing: -0.02em; font-feature-settings: "lnum"; }
-  .trust-grid .item .num small { font-size: 22px; color: #9cc8ff; }
-  .trust-grid .item .lbl { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-top: 16px; line-height: 1.55; }
-
-  .findlay-extras {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 48px;
-    margin-top: 56px;
-  }
-  .findlay-extras h5 { font-family: var(--display); font-size: 20px; font-weight: 500; margin: 0 0 20px; color: var(--white); padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.12); }
-  .findlay-extras p { color: rgba(255,255,255,.75); font-size: 14px; line-height: 1.7; margin: 0 0 16px; }
-  .findlay-extras p:last-child { margin-bottom: 0; }
-  .findlay-extras strong { color: var(--white); font-weight: 600; }
-  .findlay-extras a { color: #9cc8ff; font-weight: 700; text-decoration: underline; text-decoration-color: rgba(156,200,255,.55); text-underline-offset: 3px; }
-  .findlay-extras a:hover { color: #fff; text-decoration-color: rgba(255,255,255,.7); }
-
-  /* ---------- FAQ accordion ---------- */
-  .faq { margin: 28px 0; }
-  .faq details {
-    border-top: 1px solid var(--ink);
-    padding: 22px 0;
-  }
-  .faq details:last-of-type { border-bottom: 1px solid var(--ink); }
-  .faq summary {
-    list-style: none;
-    cursor: pointer;
-    display: flex; align-items: baseline; gap: 18px;
-    font-family: var(--display);
-    font-size: 22px; font-weight: 500;
-    color: var(--ink);
-    line-height: 1.3;
-    letter-spacing: -0.01em;
-  }
-  .faq summary::-webkit-details-marker { display: none; }
-  .faq summary::before {
-    content: "+";
-    font-family: var(--sans);
-    font-size: 24px;
-    font-weight: 400;
-    color: var(--blue);
-    width: 24px; flex: none;
-    transition: transform .2s ease;
-    line-height: 1;
-  }
-  .faq details[open] summary::before { content: "-"; }
-  .faq .answer {
-    padding: 20px 0 8px 42px;
-    font-size: 16px;
-    line-height: 1.7;
-    color: var(--ink-soft);
-    max-width: 660px;
-  }
-  .faq .answer p { margin: 0 0 16px; }
-  .faq .answer p:last-child { margin-bottom: 0; }
-
-  /* ---------- Inline CTA card ---------- */
-  .cta-inline {
-    background: var(--blue-deep);
-    color: var(--white);
-    border-radius: var(--radius-md);
-    padding: 48px 48px 44px;
-    margin: 48px 0;
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
-  }
-  .cta-inline::before {
-    content: "2026";
-    position: absolute;
-    right: -20px; bottom: -60px;
-    font-family: var(--display);
-    font-size: 320px; font-weight: 700;
-    letter-spacing: -0.04em;
-    color: rgba(255,255,255,.05);
-    line-height: 0.8;
-    pointer-events: none;
-    z-index: 0;
-  }
-  .cta-inline > * { position: relative; z-index: 1; }
-  .cta-inline .eyebrow {
-    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: #9cc8ff; font-weight: 700;
-    margin-bottom: 18px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .cta-inline .eyebrow::before {
-    content: ""; width: 28px; height: 1px; background: #9cc8ff;
-  }
-  .cta-inline h3 {
-    font-family: var(--display); font-size: clamp(32px, 3.4vw, 44px);
-    font-weight: 700; margin: 0 0 14px; color: var(--white);
-    line-height: 1.05; letter-spacing: -0.025em;
-    max-width: 720px; text-wrap: balance;
-  }
-  .cta-inline .lede {
-    margin: 0 0 28px; color: rgba(255,255,255,.78);
-    font-size: 15px; max-width: 540px; line-height: 1.55;
-  }
-  .cta-inline .actions {
-    display: flex; gap: 10px; flex-wrap: wrap;
-    align-items: center;
-  }
-  .cta-inline .meta {
-    display: flex; gap: 28px; flex-wrap: wrap;
-    margin-top: 28px; padding-top: 22px;
-    border-top: 1px solid rgba(255,255,255,.14);
-  }
-  .cta-inline .meta-item { display: flex; flex-direction: column; gap: 2px; }
-  .cta-inline .meta-item .k { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,.5); font-weight: 600; }
-  .cta-inline .meta-item .v { font-size: 14px; color: var(--white); font-weight: 500; }
-  .cta-inline .meta-item .v a { color: #ffd60a; font-weight: 700; font-size: 15px; text-decoration: underline; text-decoration-color: rgba(255,214,10,.6); text-underline-offset: 3px; }
-  .cta-inline .meta-item .v a:hover { color: #fff; text-decoration-color: rgba(255,255,255,.7); }
-  @media (max-width: 760px) {
-    .cta-inline { padding: 36px 28px 32px; margin: 40px 0; }
-    .cta-inline::before { font-size: 200px; right: -10px; bottom: -30px; }
-    .cta-inline .meta { gap: 18px; }
-  }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 14px 22px;
-    border-radius: var(--radius-pill);
-    font-size: 13px; font-weight: 600;
-    letter-spacing: 0.04em;
-    text-decoration: none;
-    border: 1px solid transparent;
-    transition: background .2s ease, color .2s ease, border-color .2s ease;
-    white-space: nowrap;
-  }
-  .btn.primary { background: var(--white); color: var(--blue-deep); }
-  .btn.primary:hover { background: var(--paper-2); color: var(--blue-deep); }
-  .btn.ghost { color: var(--white); border-color: rgba(255,255,255,.5); }
-  .btn.ghost:hover { background: rgba(255,255,255,.1); border-color: var(--white); }
-  .btn .arrow { transition: transform .2s ease; }
-  .btn:hover .arrow { transform: translateX(3px); }
-
-  /* ---------- Sources ---------- */
-  .sources {
-    background: var(--paper-2);
-    padding: 48px 0;
-    margin-top: 56px;
-    border-top: 1px solid var(--rule);
-  }
-  .sources h3 { font-family: var(--display); font-size: 28px; font-weight: 500; margin: 0 0 8px; }
-  .sources .meta-line { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 28px; }
-  .sources .ext {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 12px 28px;
-    list-style: none; padding: 0; margin: 0;
-    font-size: 14px;
-  }
-  .sources .ext li { padding: 10px 0; border-top: 1px solid var(--rule); display: flex; gap: 10px; align-items: baseline; }
-  .sources .ext li::before { content: "↗"; color: var(--blue); font-size: 12px; }
-
-  /* ---------- Closing CTA ---------- */
-  .closing-cta {
-    padding: 72px 0 88px;
-    text-align: center;
-    background: var(--paper-2);
-    border-top: 1px solid var(--rule);
-  }
-  .closing-cta h2 {
-    font-family: var(--display); font-weight: 700;
-    font-size: clamp(36px, 5vw, 64px);
-    line-height: 1.05; letter-spacing: -0.03em;
-    margin: 0 0 20px; text-wrap: balance;
-  }
-  .closing-cta h2 em { font-style: normal; color: var(--blue); font-weight: 700; }
-  .closing-cta p { font-size: 19px; color: var(--ink-soft); max-width: 560px; margin: 0 auto 36px; line-height: 1.55; }
-  .closing-cta .actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-  .closing-cta .btn.primary { background: var(--blue); color: var(--white); border-color: var(--blue); }
-  .closing-cta .btn.primary:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
-  .closing-cta .btn.ghost { color: var(--ink); border-color: var(--ink); }
-  .closing-cta .btn.ghost:hover { background: var(--ink); color: var(--white); }
-  .closing-cta .phones { margin-top: 32px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
-  .closing-cta .phones strong { color: var(--ink); font-family: var(--display); font-size: 20px; letter-spacing: 0; display: block; font-weight: 500; }
-
-  /* ---------- Responsive ---------- */
-  @media (max-width: 1280px) {
-    main.wrap { max-width: var(--maxw); }
-    .article-grid { grid-template-columns: 200px minmax(0, 1fr) 260px; gap: 48px 64px; }
-  }
   @media (max-width: 1100px) {
-    .article-grid { grid-template-columns: 200px minmax(0, 1fr); gap: 48px; }
-    .gutter { display: none; }
-    .trust-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0;
-    }
-    .trust-grid .item { padding: 24px 24px 24px 0 !important; border-right: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12); }
-    .trust-grid .item:not(:first-child) { padding-left: 0 !important; }
-    .trust-grid .item:nth-child(2) { padding-left: 24px !important; border-right: none; }
-    .trust-grid .item:nth-child(3) { padding-left: 0 !important; border-bottom: none; }
-    .trust-grid .item:nth-child(4) { padding-left: 24px !important; border-right: none; border-bottom: none; }
-    .findlay-extras { gap: 36px; }
     .cross-table { overflow-x: auto; }
     .cross-table table { min-width: 720px; }
   }
   @media (max-width: 760px) {
-    .wrap { padding: 0 20px; max-width: 100%; }
-    .article-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 48px; max-width: 100%; }
-    .article-grid > .body { max-width: 100%; }
-    .toc { position: static; max-height: none; overflow-y: visible; }
-    .gutter { position: static; max-height: none; overflow-y: visible; }
-    .hero { padding: 36px 0 28px; }
-    .hero h1 { font-size: clamp(32px, 8vw, 44px); }
-    .hero-meta { grid-template-columns: 1fr 1fr; gap: 18px; }
-    section.s { padding: 48px 0; }
-    .trims { grid-template-columns: 1fr; border: none; }
-    .trim { border-right: none !important; border-bottom: 1px solid var(--rule) !important; padding: 28px 0; }
-    .trim:last-child { border-bottom: none !important; }
-    .findlay-extras { grid-template-columns: 1fr; gap: 36px; }
-    .findlay-band { padding: 48px 0 40px; }
-    .findlay-band h2 { font-size: 32px; }
-    .findlay-band .band-deck { font-size: 17px; }
-    .trust-grid { grid-template-columns: 1fr 1fr; padding-top: 36px; margin-top: 44px; }
-    .trust-grid .item { padding: 20px 16px 20px 0 !important; }
-    .trust-grid .item:nth-child(2) { padding-left: 16px !important; }
-    .trust-grid .item:nth-child(3) { padding-left: 0 !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,.12); }
-    .trust-grid .item:nth-child(4) { padding-left: 16px !important; padding-top: 24px !important; border-top: 1px solid rgba(255,255,255,.12); }
-    .trust-grid .item .num { font-size: 40px; }
-    .spec-strip { grid-template-columns: 1fr 1fr; }
-    .spec-strip .item { border-right: none; border-bottom: 1px solid var(--rule); padding: 24px 16px; }
-    .spec-strip:not(.centered) .item:nth-child(odd) { padding-left: 0; }
-    .spec-strip:not(.centered) .item:nth-child(even) { padding-right: 0; }
-    .spec-strip.centered .item { padding: 24px 16px; }
-    .glance { padding: 28px; }
-    .glance dl { grid-template-columns: 1fr; }
-    .safety-banner { grid-template-columns: 1fr; padding: 28px; }
-    .cta-inline { grid-template-columns: 1fr; padding: 32px 24px; }
-    .cta-inline .actions { flex-direction: column; }
-    .cta-inline .actions .btn { width: 100%; text-align: center; }
-    .cta-inline .meta { grid-template-columns: 1fr; gap: 14px; }
-    .sources .ext { grid-template-columns: 1fr; }
-    blockquote.pull { margin: 40px 0; padding: 28px 0; }
-    .drives .row { grid-template-columns: 1fr auto; gap: 12px; }
-    .drives .dist { display: none; }
-    h3 { margin: 36px 0 14px; }
-    h2.section-h { font-size: clamp(26px, 7vw, 36px); }
-    p.lede::first-letter { font-size: 3.4em; padding: 4px 10px 0 0; }
-    /* Large numbers in spec strip can overflow on mobile */
-    .spec-strip .num { font-size: 36px; }
-  }
-
-  /* ---------- Tel links ---------- */
-  a.tel { color: inherit; text-decoration: none; }
-  a.tel:hover { color: var(--blue); }
-  .findlay-band a.tel { color: inherit; }
-  .findlay-band a.tel:hover { color: #9cc8ff; }
-
-  /* ---------- Accessibility ---------- */
-  .visually-hidden {
-    position: absolute; width: 1px; height: 1px;
-    padding: 0; margin: -1px; overflow: hidden;
-    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
-  }
-  .skip-link {
-    position: absolute; top: -40px; left: 8px;
-    background: var(--blue-deep); color: var(--white);
-    padding: 10px 16px; border-radius: var(--radius-sm);
-    text-decoration: none; font-size: 13px; font-weight: 600;
-    z-index: 100; transition: top .2s ease;
-  }
-  .skip-link:focus { top: 8px; color: var(--white); }
-  :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
-
-  /* ---------- Mobile defensive overflow protection ---------- */
-  /* This block runs last and uses !important to guarantee no horizontal overflow on any mobile device */
-  @media (max-width: 760px) {
-    html, body {
-      overflow-x: hidden !important;
-      max-width: 100vw !important;
-      width: 100% !important;
-    }
-    /* Every major container respects viewport width */
-    main, section, article, aside, header, footer, nav, div, figure {
-      max-width: 100% !important;
-    }
-    /* Wrap and grids cannot exceed viewport */
-    .wrap, .article-grid, .article-grid > .body, .article-grid > .toc, .article-grid > .gutter {
-      max-width: 100% !important;
-      width: 100% !important;
-    }
-    /* Specific known-problematic components - force them to behave */
-    .findlay-band, .closing-cta, .findlay-band .wrap, .closing-cta .wrap {
-      max-width: 100% !important;
-    }
-    /* Trim cards must be single-column on mobile and respect parent width */
-    .trims, .trim {
-      max-width: 100% !important;
-      width: 100% !important;
-    }
-    /* Spec strip - force single-row scroll if needed */
-    .spec-strip { max-width: 100% !important; }
-    /* Cross-shop: hide table, show stacked cards on mobile */
     .cross-table { display: none !important; }
     .cross-cards { display: block !important; }
-    /* Hero meta must collapse */
-    .hero-meta { max-width: 100% !important; }
-    /* Pull quotes must not have negative margins on mobile */
-    blockquote.pull { margin-left: 0 !important; margin-right: 0 !important; }
-    /* Full-bleed hero on mobile is full width, no overflow */
-    .hero-photo.full-bleed {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-    }
-    /* Long words and URLs break properly */
-    p, h1, h2, h3, h4, h5, h6, li, dd, dt {
-      overflow-wrap: anywhere;
-      word-break: break-word;
-    }
-    /* Hyphenate long-word ledes for cleaner mobile reading */
-    p.lede { hyphens: auto; -webkit-hyphens: auto; }
   }
-  /* Extra-narrow phones (small iPhones, foldable narrow modes) */
-  @media (max-width: 380px) {
-    .wrap { padding: 0 16px !important; }
-    .hero-meta { grid-template-columns: 1fr !important; }
-    .trust-grid { grid-template-columns: 1fr !important; }
-    .trust-grid .item { border-right: none !important; padding-left: 0 !important; }
-    .spec-strip { grid-template-columns: 1fr !important; }
-    .spec-strip:not(.centered) .item { padding-right: 0 !important; }
-    .spec-strip.centered .item { padding-left: 16px !important; padding-right: 16px !important; }
-  }
+  .hero h1 .num { font-feature-settings: "lnum"; font-weight: 700; }
 
-
-  /* ---------- Reduced motion ---------- */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-    .btn:hover .arrow { transform: none; }
-  }
 </style>
 </head>
 <body>
@@ -1292,30 +1438,50 @@
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow"><span class="pip"></span> New Inventory · Findlay Subaru of Las Vegas</div>
-    <h1>BRZ for sale <em>near me in Las Vegas.</em></h1>
-    <p class="deck">Searching "BRZ for sale near me" in the Las Vegas valley points you to Findlay Subaru at 6455 Roy Horn Way. We stock the Subaru BRZ, a rear-wheel-drive sport coupe, and our sales team can walk you through trims, availability, and a test drive. Browse our <a href="https://www.subaruoflasvegas.com/new-vehicles/">new inventory</a> to start.</p>
-    <p class="deck" style="margin-top:-28px; font-size:18px;">The BRZ is one of the few cars in the Subaru lineup that breaks the all-wheel-drive mold: a lightweight, rear-wheel-drive two-door built for drivers who want feedback through the wheel, not just a commute. If you have been searching for a BRZ near you in Las Vegas, Henderson, Summerlin, or Spring Valley, this page covers what to check before you buy. Reviewed and posted by the Findlay Subaru Sales Team.</p>
+    <h1>Where can I find a <span class="accent">BRZ for sale near me</span> in Las Vegas?</h1>
+    <p class="deck">The Subaru BRZ is the rear-wheel-drive exception to the Subaru lineup, and it lives at Findlay Subaru, 6455 Roy Horn Way. Confirm the trim and transmission you want, then take a real test drive on Las Vegas roads.</p>
+    <div class="byline">
+      <span class="b-author">By the <a href="https://www.subaruoflasvegas.com/about-us/" target="_blank" rel="noopener">Findlay Subaru of Las Vegas team</a></span>
+      <span class="b-sep">·</span>
+      <span class="b-rev">Reviewed by <strong>Scott McCoy</strong>, General Sales Manager</span>
+      <span class="b-sep">·</span>
+      <span>Published September 2026</span>
+    </div>
 
     <div class="hero-meta">
-      <div class="item"><div class="lbl">Address</div><div class="val">6455 Roy Horn Way<small>Las Vegas, NV · off I-215</small></div></div>
-      <div class="item"><div class="lbl">Sales Hours</div><div class="val">Mon-Sat 8-8<small>Closed Sunday</small></div></div>
-      <div class="item"><div class="lbl">Get in touch</div><div class="val"><a href="https://www.subaruoflasvegas.com/contact-us/">Contact form</a><small>Phones rotate for call tracking</small></div></div>
-      <div class="item"><div class="lbl">Reviews</div><div class="val">4.7 ★ · 3,672<small>Google · Findlay Subaru</small></div></div>
+      <div class="item"><div class="lbl">Address</div><div class="val">6455 Roy Horn Way<small>Las Vegas, NV 89118</small></div></div>
+      <div class="item"><div class="lbl">Sales Hours</div><div class="val">Mon–Sat 8–8<small>Closed Sunday</small></div></div>
+      <div class="item"><div class="lbl">Drive layout</div><div class="val">Rear-wheel drive<small>Manual and automatic offered</small></div></div>
+      <div class="item"><div class="lbl">Check stock</div><div class="val">Subaru BRZ<small><a href="https://www.subaruoflasvegas.com/new-vehicles/" style="color:inherit; border-bottom:1px solid currentColor;">Browse inventory →</a></small></div></div>
+    </div>
+    <div class="hero-cta">
+      <a class="primary" href="https://www.subaruoflasvegas.com/new-vehicles/">See the BRZ in stock <span class="arrow">&rarr;</span></a>
+      <a class="secondary" href="https://www.subaruoflasvegas.com/contact-us/">Ask about incoming BRZs</a>
     </div>
   </div>
 
-  <figure class="hero-photo full-bleed" role="img" aria-label="Subaru BRZ rear-wheel-drive sport coupe at Findlay Subaru of Las Vegas">
+  <figure class="hero-photo full-bleed" role="img" aria-label="A black Subaru BRZ sport coupe on the showroom floor at Findlay Subaru of Las Vegas">
     <img class="scene"
          src="brz-hero.webp"
-         alt="A Subaru BRZ rear-wheel-drive sport coupe for sale at Findlay Subaru of Las Vegas"
+         alt="A black Subaru BRZ rear-wheel-drive sport coupe for sale at Findlay Subaru of Las Vegas"
          loading="eager"
          fetchpriority="high"
          width="1920"
-         height="1080" />
-    <span class="credit">FINDLAY SUBARU OF LAS VEGAS · SUBARU BRZ</span>
+         height="1040" />
     <figcaption class="visually-hidden">The Subaru BRZ, a rear-wheel-drive two-door sport coupe, for sale at Findlay Subaru of Las Vegas.</figcaption>
   </figure>
+
 </header>
+
+<!-- Breadcrumb (visible + matches BreadcrumbList schema) -->
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <div class="wrap">
+    <ol>
+      <li><a href="https://www.subaruoflasvegas.com/">Home</a></li>
+      <li aria-current="page">BRZ For Sale Near Me in Las Vegas</li>
+    </ol>
+  </div>
+</nav>
 
 <!-- ARTICLE BODY -->
 <main class="wrap" id="main-content">
@@ -1323,7 +1489,7 @@
 
     <!-- Sticky TOC -->
     <nav class="toc" aria-label="Table of contents">
-      <h4>In this guide</h4>
+      <h4>On this page</h4>
       <ol>
         <li><a href="#why-findlay">Why shop local</a></li>
         <li><a href="#cross-shop">BRZ vs other Subarus</a></li>
@@ -1342,10 +1508,11 @@
       <section class="s" id="why-findlay">
         <div class="section-num"><span>01</span><span>From the sales floor</span></div>
         <h2 class="section-h">Why shop for a BRZ for sale near me <em>at Findlay Subaru</em>.</h2>
-        <p class="lede">Buying a sport coupe is different from buying a family SUV. The BRZ is a low-volume, enthusiast-focused car, so local availability moves fast and trims matter. Shopping at a nearby Subaru dealer means you can sit in the car, check the manual versus automatic transmission feel, and confirm the exact trim before you commit.</p>
+        <p class="lede">Buying a sport coupe is different from buying a family SUV. The BRZ is a low-volume, enthusiast-focused car, so local availability moves fast and trims matter.</p>
+
+        <p>Shopping at a nearby Subaru dealer means you can sit in the car, check the manual versus automatic transmission feel, and confirm the exact trim before you commit.</p>
 
         <h3>What a local BRZ search gets you</h3>
-        <p>Here is what shopping nearby gets you over a long-distance purchase:</p>
         <ul class="bullets">
           <li><strong>A real test drive</strong> on Las Vegas roads, not a photo gallery.</li>
           <li><strong>In-person confirmation</strong> of trim, transmission, and color.</li>
@@ -1365,6 +1532,7 @@
 
         <blockquote class="pull">
           The BRZ is a low-volume, enthusiast-focused car, so local availability moves fast and trims matter. Sit in the car before you commit.
+          <cite>Findlay Subaru sales floor</cite>
         </blockquote>
 
         <p style="font-size:12px; color:var(--muted); letter-spacing:0.02em; line-height:1.6; border-top:1px solid var(--rule-soft); padding-top:18px; margin-top:24px;"><strong style="color:var(--ink-soft); letter-spacing:0.1em; text-transform:uppercase; font-size:10px;">Note ·</strong> BRZ availability, pricing, and offers change often because it is a low-volume sport coupe. Ask us for current pricing and incentives before you decide, through our <a href="https://www.subaruoflasvegas.com/contact-us/">contact page</a>.</p>
@@ -1374,7 +1542,9 @@
       <section class="s" id="cross-shop">
         <div class="section-num"><span>02</span><span>How to choose</span></div>
         <h2 class="section-h">BRZ vs other Subaru models: <em>how to choose</em>.</h2>
-        <p class="lede">Most Subaru shoppers assume every Subaru has all-wheel drive. The BRZ is the exception. It is rear-wheel drive by design, which keeps weight down and steering sharp. If you want a sporty Subaru with AWD instead, the WRX is the closer match.</p>
+        <p class="lede">Most Subaru shoppers assume every Subaru has all-wheel drive. The BRZ is the exception. It is rear-wheel drive by design, which keeps weight down and steering sharp.</p>
+
+        <p>If you want a sporty Subaru with AWD instead, the WRX is the closer match. The comparison below frames the BRZ against two common cross-shops.</p>
 
         <!-- Desktop: comparison table -->
         <div class="cross-table">
@@ -1460,14 +1630,14 @@
           </article>
         </div>
 
-        <div class="spec-strip centered">
+        <div class="spec-strip">
           <div class="item"><div class="num">RWD</div><div class="lbl">The exception to Subaru's AWD lineup</div></div>
           <div class="item"><div class="num">2<small> doors</small></div><div class="lbl">Lightweight sport coupe body</div></div>
           <div class="item"><div class="num">M/T<small> + A/T</small></div><div class="lbl">Manual and automatic offered</div></div>
           <div class="item"><div class="num">4.7<small> ★</small></div><div class="lbl">Google rating, 3,672 reviews</div></div>
         </div>
 
-        <p style="margin-top:32px;">For full, current specs on horsepower, fuel economy, and seating, check <a href="https://www.subaru.com" rel="noopener" target="_blank">subaru.com</a> or the EPA mileage data at <a href="https://www.fueleconomy.gov" rel="noopener" target="_blank">fueleconomy.gov</a>. We do not publish spec numbers here that could go stale. Ask us for current Subaru specs when you come in. If you are cross-shopping SUVs instead of coupes, our Forester and Crosstrek pages in the <a href="https://www.subaruoflasvegas.com/new-vehicles/">new inventory</a> cover those models in depth.</p>
+        <p style="margin-top:32px;">For full, current specs on horsepower, fuel economy, and seating, check <a href="https://www.subaru.com" rel="noopener" target="_blank">subaru.com</a> or the EPA mileage data at <a href="https://www.fueleconomy.gov" rel="noopener" target="_blank">fueleconomy.gov</a>. We do not publish spec numbers here that could go stale. If you are cross-shopping SUVs instead of coupes, our Forester and Crosstrek pages in the <a href="https://www.subaruoflasvegas.com/new-vehicles/">new inventory</a> cover those models in depth.</p>
       </section>
 
       <!-- §03 What we see on the lot -->
@@ -1478,10 +1648,13 @@
 
         <p>Our sales team pulled the most recent BRZ allocation, inspected each car at delivery, and verified trim and transmission against the build sheet before it hit the showroom floor. On the last batch, in August 2026, our team confirmed two manual-transmission examples and one automatic, then walked each one through a pre-sale check so the listing matched the metal.</p>
 
-        <p>Last month, in August 2026, a shopper came in convinced the BRZ would feel cramped because it is a coupe. Our sales team had him sit in the driver's seat first, before talking numbers. He found the seating position lower and more supportive than he expected, and the trunk deeper than the photos suggested. He left to think it over, which is the kind of no-pressure pace we keep. When he came back the following Saturday, our service team had already pulled the build sheet so the second visit took half the time.</p>
+        <p>Last month, in August 2026, a shopper came in convinced the BRZ would feel cramped because it is a coupe. Our sales team had him sit in the driver's seat first, before talking numbers. He found the seating position lower and more supportive than he expected, and the trunk deeper than the photos suggested.</p>
+
+        <p>He left to think it over, which is the kind of no-pressure pace we keep. When he came back the following Saturday, our service team had already pulled the build sheet so the second visit took half the time.</p>
 
         <blockquote class="pull">
           Counterintuitively, the manual transmission is often the harder car to find, not the automatic. If a manual matters to you, tell us early so we can flag the next one that lands.
+          <cite>From the BRZ allocation desk</cite>
         </blockquote>
 
         <h3>Manual demand stays high</h3>
@@ -1489,6 +1662,62 @@
 
         <h3>First-time Subaru buyers welcome</h3>
         <p>We also see plenty of first-time Subaru buyers cross-shopping the BRZ against other brands' coupes. When that happens, our team walks them through Subaru's new-vehicle warranty coverage and the Subaru Certified Pre-Owned program, so they understand what backs the car after purchase.</p>
+
+        <!-- Manual vs Automatic quiz -->
+        <div class="quiz" id="brz-quiz" aria-label="Manual or automatic BRZ quiz">
+          <div class="quiz-eyebrow">Find your BRZ</div>
+          <h3 class="quiz-title" style="margin-top:0;">Manual or automatic? Answer four quick questions.</h3>
+          <p class="quiz-sub">Both gearboxes bolt to the same rear-wheel-drive coupe. This points you to the one that fits how you drive, then our team confirms what is on the lot.</p>
+
+          <div class="quiz-body">
+            <div class="quiz-progress"><span class="quiz-bar" style="width:25%"></span></div>
+            <div class="quiz-step" data-step="1">
+              <div class="quiz-count">Question 1 of 4</div>
+              <div class="quiz-q">What does most of your driving look like?</div>
+              <div class="quiz-opts">
+                <button type="button" class="quiz-opt" data-score="m">Weekend drives and empty canyon roads</button>
+                <button type="button" class="quiz-opt" data-score="a">Daily commuting on I-15 and the Beltway</button>
+                <button type="button" class="quiz-opt" data-score="a">A mix, but plenty of stop-and-go</button>
+              </div>
+            </div>
+            <div class="quiz-step" data-step="2" hidden>
+              <div class="quiz-count">Question 2 of 4</div>
+              <div class="quiz-q">Have you driven a manual before?</div>
+              <div class="quiz-opts">
+                <button type="button" class="quiz-opt" data-score="m">Yes, and I miss it</button>
+                <button type="button" class="quiz-opt" data-score="m">A little, and I want to get better</button>
+                <button type="button" class="quiz-opt" data-score="a">No, and I would rather not learn in traffic</button>
+              </div>
+            </div>
+            <div class="quiz-step" data-step="3" hidden>
+              <div class="quiz-count">Question 3 of 4</div>
+              <div class="quiz-q">Who else will drive the car?</div>
+              <div class="quiz-opts">
+                <button type="button" class="quiz-opt" data-score="m">Just me</button>
+                <button type="button" class="quiz-opt" data-score="a">A partner or family member who prefers automatic</button>
+                <button type="button" class="quiz-opt" data-score="a">It varies week to week</button>
+              </div>
+            </div>
+            <div class="quiz-step" data-step="4" hidden>
+              <div class="quiz-count">Question 4 of 4</div>
+              <div class="quiz-q">What matters most to you in a sport coupe?</div>
+              <div class="quiz-opts">
+                <button type="button" class="quiz-opt" data-score="m">Maximum driver involvement</button>
+                <button type="button" class="quiz-opt" data-score="a">An easier daily with the same chassis</button>
+                <button type="button" class="quiz-opt" data-score="a">Whichever arrives first</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz-result" hidden>
+            <div class="quiz-result-img"><img alt="" width="1200" height="675" loading="lazy"></div>
+            <div class="quiz-result-lbl">Your match</div>
+            <div class="quiz-result-name"></div>
+            <p class="quiz-result-why"></p>
+            <a class="quiz-result-cta" href="#">See it in stock <span class="arrow">&rarr;</span></a>
+            <button type="button" class="quiz-restart">Start over</button>
+          </div>
+        </div>
       </section>
 
       <!-- §04 What to verify before you buy -->
@@ -1498,7 +1727,7 @@
         <p class="lede">Buy with a checklist. A sport coupe rewards a careful look before signing.</p>
 
         <div class="trims">
-          <article class="trim flagship">
+          <article class="trim">
             <div class="engine-row"><span class="engine">Gearbox</span><span class="badge">Drive both</span></div>
             <h4 class="name">Confirm the transmission</h4>
             <p class="equip"><strong>Manual and automatic drive very differently.</strong> Sit in both if you can. Manual examples often sell first, so flag your preference early.</p>
@@ -1513,14 +1742,15 @@
             <h4 class="name">Decide new vs Certified Pre-Owned</h4>
             <p class="equip"><strong>We are a Subaru CPO retailer.</strong> Review warranty coverage either way, and ask us to print the current Subaru warranty terms.</p>
           </article>
-          <article class="trim wilderness">
+          <article class="trim">
             <div class="engine-row"><span class="engine">VIN</span><span class="badge">Recalls &amp; pricing</span></div>
             <h4 class="name">Run the VIN and compare pricing</h4>
             <p class="equip"><strong>Check the federal recall database</strong> at nhtsa.gov/recalls, and compare market pricing with a third-party tool like kbb.com or edmunds.com.</p>
           </article>
         </div>
 
-        <ul class="bullets" style="margin-top:32px;">
+        <h3>The checklist, in order</h3>
+        <ul class="bullets">
           <li>Confirm the transmission. Manual and automatic drive very differently.</li>
           <li>Check the trim level against the window sticker and build sheet.</li>
           <li>Decide new versus Certified Pre-Owned. We are a Subaru CPO retailer.</li>
@@ -1542,10 +1772,9 @@
           <a class="btn ghost" href="https://www.subaruoflasvegas.com/contact-us/">Ask about incoming BRZs</a>
         </div>
         <div class="meta">
-          <div class="meta-item"><span class="k">Address</span><span class="v">6455 Roy Horn Way, Las Vegas NV</span></div>
+          <div class="meta-item"><span class="k">Address</span><span class="v">6455 Roy Horn Way, Las Vegas NV 89118</span></div>
+          <div class="meta-item"><span class="k">Sales hours</span><span class="v">Mon–Sat 8–8 · Closed Sun</span></div>
           <div class="meta-item"><span class="k">Trade-in</span><span class="v"><a href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/">Trade appraisal</a></span></div>
-          <div class="meta-item"><span class="k">Contact</span><span class="v"><a href="https://www.subaruoflasvegas.com/contact-us/">Contact form</a></span></div>
-          <div class="meta-item"><span class="k">Hours</span><span class="v">Mon-Sat 8-8 · Closed Sunday</span></div>
         </div>
       </aside>
 
@@ -1553,52 +1782,73 @@
       <section class="s" id="how-it-works">
         <div class="section-num"><span>05</span><span>Visit us</span></div>
         <h2 class="section-h">How a local BRZ purchase works <em>at Findlay Subaru</em>.</h2>
-        <p class="lede">Our sales hours are Monday through Saturday, 8:00 AM to 8:00 PM, and we are closed Sunday. Service and parts run Monday through Friday, 7:00 AM to 6:00 PM, and Saturday, 7:00 AM to 5:00 PM. That means you can buy a BRZ during the week and bring it back for service the following Saturday without rearranging your schedule.</p>
+        <p class="lede">Our sales hours are Monday through Saturday, 8:00 AM to 8:00 PM, and we are closed Sunday. Service and parts run Monday through Friday, 7:00 AM to 6:00 PM, and Saturday, 7:00 AM to 5:00 PM.</p>
 
-        <div class="spec-strip stats">
-          <div class="item"><div class="num">4.7<small> ★</small></div><div class="lbl">Google rating across 3,672 reviews</div></div>
-          <div class="item"><div class="num">2023</div><div class="lbl">Subaru Love Promise Retailer of the Year</div></div>
-          <div class="item"><div class="num">A<small> · 91/100</small></div><div class="lbl">CarEdge Dealer Transparency Grade</div></div>
-          <div class="item"><div class="num">30<small>+</small></div><div class="lbl">Findlay Automotive dealerships across five states</div></div>
+        <p>That means you can buy a BRZ during the week and bring it back for service the following Saturday without rearranging your schedule.</p>
+
+        <div class="spec-strip">
+          <div class="item"><div class="num">4.7<small> ★</small></div><div class="lbl">Google rating, 3,672 reviews</div></div>
+          <div class="item"><div class="num">2023</div><div class="lbl">Love Promise Retailer of the Year</div></div>
+          <div class="item"><div class="num">A<small> · 91/100</small></div><div class="lbl">CarEdge Transparency Grade</div></div>
+          <div class="item"><div class="num">30<small>+</small></div><div class="lbl">Findlay dealerships, five states</div></div>
         </div>
 
         <h3>A typical BRZ purchase, in order</h3>
-        <ul class="bullets">
-          <li><strong>Browse current inventory</strong> at our <a href="https://www.subaruoflasvegas.com/new-vehicles/">new inventory page</a>, or ask about used and Certified Pre-Owned BRZs through the <a href="https://www.subaruoflasvegas.com/contact-us/">contact page</a>.</li>
-          <li><strong>Book a test drive.</strong> Request one through our <a href="https://www.subaruoflasvegas.com/contact-us/">contact page</a> and we will have the car ready.</li>
-          <li><strong>Get a trade value</strong> at our <a href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/">trade appraisal page</a> if you have a car to sell.</li>
-          <li><strong>Line up financing</strong> at our <a href="https://www.subaruoflasvegas.com/finance/">finance page</a>.</li>
-          <li><strong>Take delivery</strong>, then schedule first service with our service team, reach them through the <a href="https://www.subaruoflasvegas.com/contact-us/">contact page</a>.</li>
-        </ul>
+        <ol class="steps">
+          <li>
+            <h4>Browse current inventory</h4>
+            <p><a href="https://www.subaruoflasvegas.com/new-vehicles/">See what is in stock today</a>, or ask about used and Certified Pre-Owned BRZs through the <a href="https://www.subaruoflasvegas.com/contact-us/">contact page</a>.</p>
+          </li>
+          <li>
+            <h4>Book a test drive</h4>
+            <p><a href="https://www.subaruoflasvegas.com/contact-us/">Request one through our contact page</a> and we will have the car ready.</p>
+          </li>
+          <li>
+            <h4>Get a trade value</h4>
+            <p>Start at our <a href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/">trade appraisal page</a> if you have a car to sell.</p>
+          </li>
+          <li>
+            <h4>Line up financing</h4>
+            <p>Work the numbers at our <a href="https://www.subaruoflasvegas.com/finance/">finance page</a> before you arrive.</p>
+          </li>
+          <li>
+            <h4>Take delivery</h4>
+            <p>Then schedule first service with our service team through the <a href="https://www.subaruoflasvegas.com/contact-us/">contact page</a>.</p>
+          </li>
+        </ol>
 
         <p>We keep the conversation low-pressure. Our brand voice is meant to feel like a knowledgeable neighbor, not a salesperson chasing a quota.</p>
 
-        <p>Ready to move? Browse the current <a href="https://www.subaruoflasvegas.com/new-vehicles/">new inventory</a>, schedule a test drive, or get financing at our <a href="https://www.subaruoflasvegas.com/finance/">finance page</a>. If you want to talk specifics first, reach us through our <a href="https://www.subaruoflasvegas.com/contact-us/">contact page</a>. Our phone numbers rotate for call tracking, so use the contact form or the links above rather than a printed number.</p>
+        <figure class="section-image" style="margin:32px 0 28px;">
+          <div style="border-radius:12px;overflow:hidden;aspect-ratio:16/9;">
+            <img src="dealership-dusk.webp" alt="The Findlay Subaru of Las Vegas dealership at dusk, showroom lit and new Subarus out front at 6455 Roy Horn Way" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;">
+          </div>
+          <figcaption>Findlay Subaru sits at 6455 Roy Horn Way off the I-215 Beltway, so most of the valley reaches the lot in under half an hour, and your BRZ comes back here for its first service.</figcaption>
+        </figure>
+
+        <div class="visit-card"><div class="visit-eyebrow">Visit us</div><div class="visit-grid"><div class="visit-col"><div class="visit-lbl">Address</div><div class="visit-val">6455 Roy Horn Way<br>Las Vegas, NV 89118</div><div class="visit-note">Off the I-215 Beltway</div></div><div class="visit-col"><div class="visit-lbl">Sales hours</div><div class="visit-val">Monday to Saturday, 8:00 AM to 8:00 PM</div><div class="visit-note">Closed Sunday · Phones rotate for call tracking, use the <a href="https://www.subaruoflasvegas.com/contact-us/">contact form</a></div></div></div><a class="visit-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=6455+Roy+Horn+Way,+Las+Vegas,+NV+89118">Get directions <span class="arrow">&rarr;</span></a></div>
       </section>
     </div>
 
     <!-- Right gutter -->
-    <aside class="gutter" aria-label="Trust signals">
-      <div class="chip">
-        <div class="lbl">Google rating</div>
-        <div class="stars">★★★★★</div>
-        <strong style="font-size:28px;">4.7</strong>
-        <div class="sub">Across 3,672 customer reviews</div>
+    <aside class="gutter" aria-label="Get your BRZ">
+      <div class="chip chip-cta">
+        <div class="lbl">Check availability</div>
+        <strong class="chip-cta-title">Your Subaru BRZ</strong>
+        <div class="chip-cta-sub">See the trim and transmission in stock, then take a real test drive on Las Vegas roads.</div>
+        <a class="chip-cta-btn" href="https://www.subaruoflasvegas.com/new-vehicles/">See it in stock <span class="arrow">&rarr;</span></a>
       </div>
       <div class="chip">
-        <div class="lbl">Get in touch</div>
-        <a href="https://www.subaruoflasvegas.com/contact-us/"><strong style="font-family:var(--display); font-size:22px;">Contact form</strong></a>
-        <div class="sub">Ask about current BRZ stock, incoming allocations, and test drives</div>
+        <div class="lbl">Customer reviews</div>
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <strong>4.7 / 5.0</strong>
+        <div class="sub">across 3,672 Google reviews · live count</div>
       </div>
-      <div class="chip">
-        <div class="lbl">Award · 2023</div>
-        <strong style="font-size:18px; line-height:1.2;">Love Promise Retailer of the Year</strong>
-        <div class="sub">Subaru of America's highest retailer honor</div>
-      </div>
-      <div class="chip">
+      <div class="chip chip-offer">
         <div class="lbl">Want a manual?</div>
-        <strong style="font-size:22px; line-height:1.2;">Tell us early</strong>
-        <div class="sub">BRZ manuals often sell first · we'll flag the next one that lands</div>
+        <div class="offer-model">Tell us early</div>
+        <div class="offer-terms">BRZ manuals often sell first. Flag your preference and we will call you when the next one lands.</div>
+        <a class="cta" href="https://www.subaruoflasvegas.com/contact-us/">Flag your preference →</a>
       </div>
     </aside>
   </div>
@@ -1607,10 +1857,23 @@
 <!-- Why us full-bleed band -->
 <section class="findlay-band">
   <div class="wrap">
-    <div class="eyebrow">Findlay Subaru of Las Vegas</div>
+    <div class="eyebrow">About Findlay Subaru of Las Vegas</div>
     <h2>Part of Findlay Automotive Group <em>since 1961</em>.</h2>
-    <p class="band-deck">Findlay Automotive Group, founded 1961, is a family-owned group of more than 30 dealerships across Nevada, Arizona, Utah, Idaho, and Washington, the buying power of a large group with a neighborhood Subaru store's feel. The same team that earns our 4.7★ reviews inspects each BRZ at delivery and verifies trim and transmission against the build sheet.</p>
-
+    <div class="band-cols">
+      <div class="band-text">
+        <p class="band-deck">Findlay Automotive Group, founded 1961, is a family-owned group of more than 30 dealerships across Nevada, Arizona, Utah, Idaho, and Washington, the buying power of a large group with a neighborhood Subaru store's feel.</p>
+        <p class="band-deck">The same team that earns our 4.7★ reviews inspects each BRZ at delivery and verifies trim and transmission against the build sheet.</p>
+        <p class="band-deck band-deck-sm">That approach is why Subaru of America named us Love Promise Retailer of the Year in 2023, its recognition for retailers who live the principles of Honesty, Empathy, Appreciation, and Respect.</p>
+      </div>
+      <div class="band-marks">
+        <a class="mark" href="https://www.subaruoflasvegas.com/subaru-love-promise/" aria-label="Subaru Love Promise">
+          <img src="love-promise-logo.webp" width="600" height="630" alt="The Subaru Love Promise logo">
+        </a>
+        <a class="mark" href="https://www.subaruoflasvegas.com/subaru-love-promise/" aria-label="2026 Subaru Love Promise Heart Award recipient">
+          <img src="love-promise-heart-award-2026.webp" width="700" height="1180" alt="The Subaru Love Promise 2026 Heart Award logo">
+        </a>
+      </div>
+    </div>
     <div class="trust-grid">
       <div class="item">
         <div class="num">4.7<small> ★</small></div>
@@ -1625,30 +1888,8 @@
         <div class="lbl">Subaru Love Promise<br>Retailer of the Year</div>
       </div>
       <div class="item">
-        <div class="num">A</div>
-        <div class="lbl">CarEdge Transparency<br>Grade · 91/100</div>
-      </div>
-    </div>
-
-    <div class="findlay-extras">
-      <div>
-        <h5>Awards &amp; recognition</h5>
-        <p><strong>Subaru Love Promise Retailer of the Year 2023</strong>, plus six consecutive Subaru Customer Commitment Awards (2018-2023).</p>
-        <p><strong>DealerRater Nevada State Dealer of the Year</strong> for Consumer Satisfaction (2019-2023, 2025, 2026), 14 DealerRater seals on Cars.com.</p>
-        <p>BBB Accredited since June 7, 2016.</p>
-      </div>
-      <div>
-        <h5>The Subaru BRZ on our lot</h5>
-        <p>Subaru's rear-wheel-drive exception: a <strong>lightweight, two-door sport coupe</strong> built for drivers who want feedback through the wheel, not just a commute.</p>
-        <p>Offered with <strong>manual and automatic</strong> transmissions, new or <strong>Subaru Certified Pre-Owned</strong>. Manuals often go first, tell us early and we'll flag the next arrival.</p>
-        <p>Every car inspected at delivery, trim and transmission verified against the build sheet.</p>
-      </div>
-      <div>
-        <h5>Hours &amp; contact</h5>
-        <p><strong>Sales</strong> Mon-Sat 8 AM-8 PM<br><strong>Sunday</strong> closed</p>
-        <p><strong>Service &amp; Parts</strong> Mon-Fri 7 AM-6 PM · Sat 7 AM-5 PM</p>
-        <p><strong>Get in touch</strong> <a href="https://www.subaruoflasvegas.com/contact-us/">contact page</a><br><strong>Inventory</strong> <a href="https://www.subaruoflasvegas.com/new-vehicles/">New inventory</a><br><strong>Trade</strong> <a href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/">Trade appraisal</a></p>
-        <p>6455 Roy Horn Way, Las Vegas, NV · off the I-215 Beltway.</p>
+        <div class="num">A<small> · 91</small></div>
+        <div class="lbl">CarEdge Dealer<br>Transparency Grade</div>
       </div>
     </div>
   </div>
@@ -1722,30 +1963,55 @@
       </section>
     </div>
 
-    <aside class="gutter" aria-label="Quick contact">
+    <aside class="gutter" aria-label="Quick links">
       <div class="chip">
-        <div class="lbl">Get in touch</div>
-        <a href="https://www.subaruoflasvegas.com/contact-us/"><strong style="font-family:var(--display); font-size:22px;">Contact form</strong></a>
-        <div class="sub">Ask about BRZ stock and test drives · Sales Mon-Sat 8-8</div>
+        <div class="lbl">Browse inventory</div>
+        <strong style="font-size:18px; line-height:1.2;">Subaru BRZ</strong>
+        <div class="sub">Manual and automatic · new and CPO</div>
+        <a class="cta" href="https://www.subaruoflasvegas.com/new-vehicles/">New inventory →</a>
       </div>
       <div class="chip">
-        <div class="lbl">Browse</div>
-        <a href="https://www.subaruoflasvegas.com/new-vehicles/"><strong style="font-family:var(--display); font-size:22px;">New inventory</strong></a>
-        <div class="sub">Subaru BRZ · manual and automatic · new and CPO</div>
+        <div class="lbl">Talk to sales</div>
+        <strong style="font-size:18px; line-height:1.2;">Contact page</strong>
+        <div class="sub">An advisor confirms availability and books your drive</div>
+        <a class="cta" href="https://www.subaruoflasvegas.com/contact-us/">Contact us →</a>
       </div>
       <div class="chip">
         <div class="lbl">Trade-in</div>
-        <a href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/"><strong style="font-family:var(--display); font-size:22px;">Trade appraisal</strong></a>
+        <strong style="font-size:18px; line-height:1.2;">Trade appraisal</strong>
         <div class="sub">Do your appraisal on-site while you look at the BRZ</div>
+        <a class="cta" href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/">Start a trade →</a>
       </div>
       <div class="chip">
         <div class="lbl">Visit</div>
-        <a href="https://maps.google.com/?q=6455+Roy+Horn+Way+Las+Vegas+NV+89118" rel="noopener"><strong style="font-family:var(--display); font-size:18px; line-height:1.25;">6455 Roy Horn Way<br>Las Vegas, NV · off I-215</strong></a>
-        <div class="sub">Closest Subaru store for Henderson, Summerlin, Spring Valley</div>
+        <a class="cta" href="https://maps.google.com/?q=6455+Roy+Horn+Way+Las+Vegas+NV+89118" rel="noopener" style="margin-top:0;border-bottom:none;"><strong style="font-family:var(--display); font-size:18px; line-height:1.25;">6455 Roy Horn Way<br>Las Vegas, NV 89118</strong></a>
+        <div class="sub">Off the I-215 Beltway · Mon–Sat 8–8</div>
       </div>
     </aside>
   </div>
 </main>
+
+<!-- Related Reading -->
+<section class="sources" id="related-reading">
+  <div class="wrap">
+    <div class="article-grid" style="padding-top:0;">
+      <div></div>
+      <div class="body">
+        <div class="section-num"><span>·</span><span>Related reading</span></div>
+        <h3>More from Findlay Subaru of Las Vegas</h3>
+        <p class="meta-line">Guides and comparisons from the Findlay Subaru of Las Vegas team</p>
+        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;">Cross-shopping the BRZ, or planning ownership? These help you compare and plan.</p>
+        <ul class="ext">
+          <li><a href="https://www.subaruoflasvegas.com/new-vehicles/">Browse the full new-vehicle lineup</a>. BRZ, WRX, and every AWD model side by side before you pick.</li>
+          <li><a href="https://www.subaruoflasvegas.com/2026-subaru-crosstrek-for-sale/">2026 Subaru Crosstrek for sale</a>. The compact AWD cross-shop, if practicality wins the argument.</li>
+          <li><a href="https://www.subaruoflasvegas.com/every-2026-subaru-suv-side-by-side/">Every 2026 Subaru SUV, side by side</a>. Outback, Forester, Crosstrek, Ascent, and Solterra compared.</li>
+          <li><a href="https://www.subaruoflasvegas.com/subaru-service-center-in-las-vegas/">Subaru service center in Las Vegas</a>. Factory-trained service and Genuine Parts for the ownership years.</li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+  </div>
+</section>
 
 <!-- Sources -->
 <section class="sources" id="sources">
@@ -1753,21 +2019,20 @@
     <div class="article-grid" style="padding-top:0;">
       <div></div>
       <div class="body">
-        <div class="section-num"><span>07</span><span>References</span></div>
-        <h3>Sources and references</h3>
-        <p class="meta-line">Reviewed June 2026 · updated August 2026 by the Findlay Subaru Sales Team</p>
+        <div class="section-num"><span>07</span><span>Provenance</span></div>
+        <h3>Sources &amp; references</h3>
+        <p style="font-size:13px; color:var(--muted); line-height:1.55; margin: 0 0 6px; max-width:660px;">By the Findlay Subaru of Las Vegas team, reviewed by the <strong style="color:var(--ink-soft);">General Sales Manager</strong> · published September 2026.</p>
+        <p style="font-size:13px; color:var(--muted); line-height:1.55; margin: 0 0 28px; max-width:660px;">BRZ availability, pricing, and offers change often because it is a low-volume sport coupe; we do not publish spec or price numbers that could go stale. Current Subaru specifications reflect Subaru USA publications, so verify current figures at subaru.com or with our team before you buy.</p>
+        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;">Findlay Subaru is an established Subaru dealership rated 4.7★ from 3,672 Google reviews (live count), with a CarEdge Dealer Transparency Grade A (91/100), the Subaru Love Promise Retailer of the Year 2023 honor, and BBB accreditation since 2016. Part of Findlay Automotive Group, founded 1961.</p>
 
-        <div style="border:1px solid var(--rule); border-radius:var(--radius-md); padding:20px 22px; margin:0 0 24px; max-width:660px; background:var(--white);">
-          <div style="font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; font-weight:600;">Editorial byline</div>
-          <div style="font-family:var(--display); font-size:18px; font-weight:500; color:var(--ink); line-height:1.3;">Findlay Subaru Sales Team</div>
-          <div style="font-size:13px; color:var(--ink-soft); margin-top:2px;">BRZ availability and buyer-guide content reviewed and posted by the Findlay Subaru Sales Team.</div>
-          <div style="font-size:12px; color:var(--muted); margin-top:10px; letter-spacing:0.04em;">Findlay Subaru · 6455 Roy Horn Way, Las Vegas, NV · off the I-215 Beltway</div>
-        </div>
-
-        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;">Findlay Subaru is an established Subaru dealership rated 4.7★ from 3,672 Google reviews (live count). BRZ availability, pricing, and offers change often because it is a low-volume sport coupe; we do not publish spec or price numbers that could go stale. Current Subaru specifications reflect Subaru USA publications, so verify current figures at subaru.com or with our team before you buy.</p>
-
-        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;"><em>If a question about the BRZ at Findlay Subaru is not answered here, reach our team through the <a href="https://www.subaruoflasvegas.com/contact-us/">contact page</a> or browse current inventory at <a href="https://www.subaruoflasvegas.com/" rel="noopener">subaruoflasvegas.com</a>. (Our phone numbers rotate for call tracking, so use the contact form or the links above.)</em></p>
-
+        <h4 style="margin-top:28px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">Next steps</h4>
+        <ul class="ext" style="margin-bottom:28px;">
+          <li><a href="https://www.subaruoflasvegas.com/new-vehicles/">Browse current BRZ inventory</a></li>
+          <li><a href="https://www.subaruoflasvegas.com/finance/">Line up financing</a></li>
+          <li><a href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/">Start a trade appraisal</a></li>
+          <li><a href="https://www.subaruoflasvegas.com/contact-us/">Contact the sales team</a></li>
+        </ul>
+        <h4 style="margin-top:8px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">Sources and references</h4>
         <ul class="ext">
           <li><a href="https://www.subaru.com" rel="noopener" target="_blank">Subaru USA · current BRZ specs, trims, and equipment</a></li>
           <li><a href="https://www.fueleconomy.gov" rel="noopener" target="_blank">fueleconomy.gov · EPA mileage data</a></li>
@@ -1785,17 +2050,16 @@
 <section class="closing-cta">
   <div class="wrap">
     <h2>Find your <em>Subaru BRZ</em> in Las Vegas.</h2>
-    <p>Browse current stock, book a test drive on Las Vegas roads, and tell us early if you want a manual. We'll flag the next BRZ that lands and keep the conversation low-pressure.</p>
+    <p>Browse current stock, book a test drive on Las Vegas roads, and tell us early if you want a manual. We will flag the next BRZ that lands and keep the conversation low-pressure.</p>
     <div class="actions">
       <a class="btn primary" href="https://www.subaruoflasvegas.com/new-vehicles/">Browse new inventory <span class="arrow">→</span></a>
       <a class="btn ghost" href="https://www.subaruoflasvegas.com/finance/">Get financing</a>
       <a class="btn ghost" href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/">Start a trade appraisal</a>
     </div>
-    <div class="phones">
-      <span>Contact <a href="https://www.subaruoflasvegas.com/contact-us/"><strong>Contact form</strong></a></span>
-      <span>Inventory <a href="https://www.subaruoflasvegas.com/new-vehicles/"><strong>New inventory</strong></a></span>
-      <span>Trade <a href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/"><strong>Trade appraisal</strong></a></span>
-      <span>Visit <a href="https://maps.google.com/?q=6455+Roy+Horn+Way+Las+Vegas+NV+89118" rel="noopener"><strong>6455 Roy Horn Way</strong></a></span>
+    <div class="visit">
+      <span>Contact<strong><a href="https://www.subaruoflasvegas.com/contact-us/" style="color:inherit;text-decoration:none;">Contact form</a></strong></span>
+      <span>Inventory<strong><a href="https://www.subaruoflasvegas.com/new-vehicles/" style="color:inherit;text-decoration:none;">New inventory</a></strong></span>
+      <span>Visit<strong><a href="https://maps.google.com/?q=6455+Roy+Horn+Way+Las+Vegas+NV+89118" rel="noopener" style="color:inherit;text-decoration:none;">6455 Roy Horn Way</a></strong></span>
     </div>
   </div>
 </section>
@@ -1827,5 +2091,46 @@
   })();
 </script>
 
+<script>
+(function(){
+  var quiz=document.getElementById("brz-quiz");
+  if(!quiz)return;
+  var steps=quiz.querySelectorAll(".quiz-step"),bar=quiz.querySelector(".quiz-bar");
+  var body=quiz.querySelector(".quiz-body"),result=quiz.querySelector(".quiz-result");
+  var total=steps.length,cur=0,score={m:0,a:0};
+  function show(n){steps.forEach(function(s,i){s.hidden=(i!==n);});bar.style.width=((n+1)/total*100)+"%";}
+  quiz.querySelectorAll(".quiz-opt").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      score[btn.getAttribute("data-score")]++;
+      cur++;
+      if(cur<total){show(cur);}else{finish();}
+    });
+  });
+  function finish(){
+    body.hidden=true;result.hidden=false;
+    var manual=score.m>=score.a;
+    var img=result.querySelector(".quiz-result-img img");
+    var name=result.querySelector(".quiz-result-name");
+    var why=result.querySelector(".quiz-result-why");
+    var cta=result.querySelector(".quiz-result-cta");
+    if(manual){
+      name.textContent="The manual BRZ";
+      img.src="brz-hero.webp";img.alt="A black Subaru BRZ sport coupe on the showroom floor at Findlay Subaru of Las Vegas";
+      why.textContent="Your driving leans toward involvement: canyon miles, solo seat time, and working the gearbox yourself. Manual BRZs sell first, so tell our team early and we will flag the next one that lands.";
+      cta.setAttribute("href","https://www.subaruoflasvegas.com/contact-us/");
+      cta.firstChild.textContent="Flag the next manual ";
+    }else{
+      name.textContent="The automatic BRZ";
+      img.src="dealership-dusk.webp";img.alt="The Findlay Subaru of Las Vegas dealership at dusk";
+      why.textContent="Your driving leans toward daily miles, shared seat time, and stop-and-go traffic, where the automatic keeps the same rear-wheel-drive chassis without the clutch work. Ask our team what is on the lot now.";
+      cta.setAttribute("href","https://www.subaruoflasvegas.com/new-vehicles/");
+      cta.firstChild.textContent="See the BRZ in stock ";
+    }
+  }
+  quiz.querySelector(".quiz-restart").addEventListener("click",function(){
+    cur=0;score={m:0,a:0};result.hidden=true;body.hidden=false;show(0);
+  });
+})();
+</script>
 </body>
 </html>
