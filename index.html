@@ -14,9 +14,9 @@
 <meta property="og:description" content="The Subaru BRZ rear-wheel-drive sport coupe, for sale at Findlay Subaru in Las Vegas. Trims, manual vs automatic, new vs Certified Pre-Owned, and a real test drive on Las Vegas roads." />
 <meta property="og:url" content="https://www.subaruoflasvegas.com/brz-for-sale-near-me-new/" />
 <meta property="og:site_name" content="Findlay Subaru of Las Vegas" />
-<meta property="og:image" content="brz-hero.webp" />
-<meta property="og:image:width" content="1920" />
-<meta property="og:image:height" content="1040" />
+<meta property="og:image" content="brz.jpg" />
+<meta property="og:image:width" content="1600" />
+<meta property="og:image:height" content="675" />
 <meta property="og:locale" content="en_US" />
 <meta property="article:published_time" content="2026-09-01T00:00:00-07:00" />
 <meta property="article:modified_time" content="2026-09-01T00:00:00-07:00" />
@@ -26,15 +26,15 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="BRZ For Sale Near Me | Findlay Subaru Las Vegas" />
-<meta name="twitter:description" content="The Subaru BRZ rear-wheel-drive sport coupe, for sale at Findlay Subaru in Las Vegas. A real test drive, not a photo gallery." />
-<meta name="twitter:image" content="brz-hero.webp" />
+<meta name="twitter:description" content="The Subaru BRZ rear-wheel-drive sport coupe, for sale at Findlay Subaru in Las Vegas. A real test drive on Las Vegas roads." />
+<meta name="twitter:image" content="brz.jpg" />
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="https://dealerinspire-shared-assets.s3.amazonaws.com/public/oem/subaru/general/favicon.png" />
 <link rel="apple-touch-icon" href="https://dealerinspire-shared-assets.s3.amazonaws.com/public/oem/subaru/general/favicon.png" />
 
 <!-- Preload hero image for faster LCP -->
-<link rel="preload" as="image" href="brz-hero.webp" fetchpriority="high" />
+<link rel="preload" as="image" href="brz.jpg" fetchpriority="high" />
 
 <!-- JSON-LD: Article + AutoDealer + Vehicle Product + FAQPage + BreadcrumbList -->
 <script type="application/ld+json">
@@ -50,7 +50,7 @@
       "@id": "https://www.subaruoflasvegas.com/brz-for-sale-near-me-new/#article",
       "headline": "BRZ For Sale Near Me | Findlay Subaru Las Vegas",
       "description": "Searching BRZ for sale near me in Las Vegas points you to Findlay Subaru at 6455 Roy Horn Way. What to check before you buy a Subaru BRZ, how it fits next to other Subaru models, and how a local BRZ purchase works.",
-      "image": "brz-hero.webp",
+      "image": "brz.jpg",
       "datePublished": "2026-09-01T00:00:00-07:00",
       "dateModified": "2026-09-01T00:00:00-07:00",
       "author": {
@@ -88,7 +88,6 @@
       "url": "https://www.subaruoflasvegas.com/",
       "image": "https://www.subaruoflasvegas.com/img/subaru-of-las-vegas-storefront.jpg",
       "logo": "https://www.subaruoflasvegas.com/img/subaru-of-las-vegas-logo.png",
-      "telephone": "+1-702-495-2197",
       "priceRange": "$$",
       "foundingDate": "1961",
       "parentOrganization": { "@type": "Organization", "name": "Findlay Automotive Group" },
@@ -117,13 +116,11 @@
       "department": [
         {
           "@type": "AutoRepair",
-          "name": "Findlay Subaru of Las Vegas Service",
-          "telephone": "+1-702-495-2149"
+          "name": "Findlay Subaru of Las Vegas Service"
         },
         {
           "@type": "AutoPartsStore",
-          "name": "Findlay Subaru of Las Vegas Parts",
-          "telephone": "+1-702-495-2140"
+          "name": "Findlay Subaru of Las Vegas Parts"
         }
       ],
       "areaServed": [
@@ -207,7 +204,7 @@
           "name": "What does the BRZ cost and are there any offers?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pricing and offers change, so we do not publish set numbers here. Ask us for current BRZ pricing and any available incentives, and check the finance page for financing options. You can also compare market values at kbb.com before you visit."
+            "text": "Pricing and offers change, so we do not publish set numbers here. Ask us for current BRZ pricing and any available incentives, and check the finance page for financing options. You can also ask our team to walk you through current market values before you visit."
           }
         },
         {
@@ -215,7 +212,7 @@
           "name": "Should I buy a new or Certified Pre-Owned BRZ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Both are options. A new BRZ carries the full Subaru new-vehicle warranty, while a Certified Pre-Owned BRZ goes through Subaru's CPO inspection and adds coverage. Findlay Subaru is a Subaru Certified Pre-Owned retailer. Ask our team to compare the two side by side."
+            "text": "Both are options. A new BRZ carries the full Subaru new-vehicle warranty, while a Certified Pre-Owned BRZ goes through Subaru's CPO inspection and adds coverage. We are a Subaru Certified Pre-Owned retailer. Ask our team to compare the two side by side."
           }
         },
         {
@@ -1434,6 +1431,21 @@
   }
   .hero h1 .num { font-feature-settings: "lnum"; font-weight: 700; }
 
+
+  /* Trust grid: centred figures and labels */
+  .trust-grid .item,
+  .trust-grid .item:not(:first-child),
+  .trust-grid .item:nth-child(2),
+  .trust-grid .item:nth-child(3),
+  .trust-grid .item:nth-child(4) {
+    text-align: center !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .trust-grid .item .glink { display: block; text-align: center; }
+  /* Quiz result: CTA left, Start over right */
+  .quiz-result-actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .quiz-result-actions .quiz-restart { margin-top: 0; padding: 6px 2px; }
 </style>
 </head>
 <body>
@@ -1445,11 +1457,11 @@
   <div class="wrap">
     <div class="eyebrow"><span class="pip"></span> New Inventory · Findlay Subaru of Las Vegas</div>
     <h1><span class="accent">Find the right Subaru BRZ just for you</span> at Findlay Subaru of Las Vegas.</h1>
-    <p class="deck">The BRZ stands out as the sole rear-wheel-drive sports car in the Subaru lineup, engineered for driver engagement. Explore our current inventory at 6455 Roy Horn Way, compare trims and transmission options, and schedule a test drive in Las Vegas today.</p>
+    <p class="deck">You want the one Subaru that sends its power to the rear wheels. See our BRZ trims available in Las Vegas, Nevada.</p>
     <div class="byline">
       <span class="b-author">By the <a href="https://www.subaruoflasvegas.com/about-us/" target="_blank" rel="noopener">Findlay Subaru of Las Vegas team</a></span>
       <span class="b-sep">·</span>
-      <span class="b-rev">Reviewed by <strong>Scott McCoy</strong>, General Sales Manager</span>
+      <span class="b-rev">Reviewed by our sales team</span>
       <span class="b-sep">·</span>
       <span>Published September 2026</span>
     </div>
@@ -1461,20 +1473,20 @@
       <div class="item"><div class="lbl">Check stock</div><div class="val">Subaru BRZ<small><a href="https://www.subaruoflasvegas.com/new-vehicles/" style="color:inherit; border-bottom:1px solid currentColor;">Browse inventory →</a></small></div></div>
     </div>
     <div class="hero-cta">
-      <a class="primary" href="https://www.subaruoflasvegas.com/new-vehicles/">See the BRZ in stock <span class="arrow">&rarr;</span></a>
+      <a class="primary" href="https://www.subaruoflasvegas.com/2026-subaru-brz-las-vegas-nv/">See the BRZ in stock <span class="arrow">&rarr;</span></a>
       <a class="secondary" href="https://www.subaruoflasvegas.com/contact-us/">Ask about incoming BRZs</a>
     </div>
   </div>
 
-  <figure class="hero-photo full-bleed" role="img" aria-label="A black Subaru BRZ sport coupe on the showroom floor at Findlay Subaru of Las Vegas">
+  <figure class="hero-photo full-bleed" role="img" aria-label="A gray Subaru BRZ tS sport coupe parked outdoors at golden hour, for sale at Findlay Subaru of Las Vegas">
     <img class="scene"
-         src="brz-hero.webp"
-         alt="A black Subaru BRZ rear-wheel-drive sport coupe for sale at Findlay Subaru of Las Vegas"
+         src="brz.jpg"
+         alt="A gray Subaru BRZ tS rear-wheel-drive sport coupe parked on a tree-lined drive at golden hour, available at Findlay Subaru of Las Vegas"
          loading="eager"
          fetchpriority="high"
-         width="1920"
-         height="1040" />
-    <figcaption class="visually-hidden">The Subaru BRZ, a rear-wheel-drive two-door sport coupe, for sale at Findlay Subaru of Las Vegas.</figcaption>
+         width="1600"
+         height="675" />
+    <figcaption class="visually-hidden">The Subaru BRZ tS, a rear-wheel-drive two-door sport coupe, photographed at golden hour, for sale at Findlay Subaru of Las Vegas.</figcaption>
   </figure>
 
 </header>
@@ -1520,7 +1532,7 @@
 
         <h3>What a local BRZ search gets you</h3>
         <ul class="bullets">
-          <li><strong>A real test drive</strong> on Las Vegas roads, not a photo gallery.</li>
+          <li><strong>A real test drive</strong> on Las Vegas roads.</li>
           <li><strong>In-person confirmation</strong> of trim, transmission, and color.</li>
           <li><strong>A trade appraisal you can do on-site</strong> at our <a href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/">trade appraisal page</a>.</li>
           <li><strong>Financing handled locally</strong> through our <a href="https://www.subaruoflasvegas.com/finance/">finance page</a>.</li>
@@ -1531,7 +1543,7 @@
         <ul class="bullets">
           <li><strong>Established Subaru retailer</strong> rated <strong><a href="https://www.google.com/search?q=findlay+subaru+las+vegas&amp;oq=findlay+sub&amp;gs_lcrp=EgZjaHJvbWUqDAgEEAAYQxiABBiKBTIGCAAQIxgnMgYIARBFGDkyBggCEEUYOzIICAMQRRgnGDsyDAgEEAAYQxiABBiKBTIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDk1NDFqMGo3qAIIsAIB8QVNhrjEVrjJgg&amp;sourceid=chrome&amp;source=chrome.ob&amp;ie=UTF-8#lrd=0x80c8c1378628aa99:0xc2547d3f82d3fabe,1,,,," target="_blank" rel="noopener" title="Opens the live Google listing - the review count there updates in real time">4.7★ from 3,672 Google reviews</a></strong>, so the same highly rated team walks you through the BRZ.</li>
           <li><strong>Subaru Love Promise Retailer of the Year 2023</strong>, Subaru of America's highest retailer honor, plus six consecutive Subaru Customer Commitment Awards (2018-2023).</li>
-          <li><strong>CarEdge Dealer Transparency Grade A (91/100)</strong> and BBB Accredited since June 7, 2016, so your out-the-door figure is in writing, not a moving target.</li>
+          <li><strong>CarEdge Dealer Transparency Grade A (91/100)</strong> and BBB Accredited since June 7, 2016, so your out-the-door figure is in writing.</li>
           <li><strong>DealerRater Nevada State Dealer of the Year</strong> for Consumer Satisfaction (2019-2023, 2025, and 2026), 14 DealerRater seals on Cars.com across 2019-2026.</li>
           <li><strong>Part of Findlay Automotive Group</strong> (founded 1961), a <strong>family-owned group of more than 30 dealerships across five states</strong>, the buying power of a large group with a neighborhood Subaru store's feel.</li>
         </ul>
@@ -1636,14 +1648,21 @@
           </article>
         </div>
 
-        <div class="spec-strip">
+        <div class="spec-strip centered">
           <div class="item"><div class="num">RWD</div><div class="lbl">The exception to Subaru's AWD lineup</div></div>
           <div class="item"><div class="num">2<small> doors</small></div><div class="lbl">Lightweight sport coupe body</div></div>
           <div class="item"><div class="num">M/T<small> + A/T</small></div><div class="lbl">Manual and automatic offered</div></div>
-          <div class="item"><a class="glink" href="https://www.google.com/search?q=findlay+subaru+las+vegas&amp;oq=findlay+sub&amp;gs_lcrp=EgZjaHJvbWUqDAgEEAAYQxiABBiKBTIGCAAQIxgnMgYIARBFGDkyBggCEEUYOzIICAMQRRgnGDsyDAgEEAAYQxiABBiKBTIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDk1NDFqMGo3qAIIsAIB8QVNhrjEVrjJgg&amp;sourceid=chrome&amp;source=chrome.ob&amp;ie=UTF-8#lrd=0x80c8c1378628aa99:0xc2547d3f82d3fabe,1,,,," target="_blank" rel="noopener" title="Opens the live Google listing - the review count there updates in real time"><div class="num">4.7<small> ★</small></div><div class="lbl">Dealer Google rating, 3,672 reviews</div></a></div>
+          <div class="item"><div class="num">4.7<small> ★</small></div><div class="lbl">Dealer Google rating, 3,672 reviews</div></div>
         </div>
 
-        <p style="margin-top:32px;">For full, current specs on horsepower, fuel economy, and seating, check <a href="https://www.subaru.com" rel="noopener" target="_blank">subaru.com</a> or the EPA mileage data at <a href="https://www.fueleconomy.gov" rel="noopener" target="_blank">fueleconomy.gov</a>. We do not publish spec numbers here that could go stale. If you are cross-shopping SUVs instead of coupes, our Forester and Crosstrek pages in the <a href="https://www.subaruoflasvegas.com/new-vehicles/">new inventory</a> cover those models in depth.</p>
+        <p style="margin-top:32px;">We don't publish spec numbers here that could go stale. For current horsepower, fuel economy, and seating, check subaru.com or the EPA data at fueleconomy.gov. If you're cross-shopping SUVs, see our Subaru Forester and Subaru Crosstrek pages.</p>
+        <figure class="video-embed">
+          <div class="frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/JTJKhMWRQTE" title="Subaru: The 2022 Subaru BRZ. Sports Car Purity, Subaru DNA" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <figcaption class="vcap">Subaru&rsquo;s own introduction to the current-generation BRZ. It walks through the rear-wheel-drive layout, the low-mounted 2.4-liter Boxer engine, and the driving position. These are the things that separate the BRZ from the all-wheel-drive Subarus alongside it on our lot.</figcaption>
+        </figure>
+
       </section>
 
       <!-- §03 What we see on the lot -->
@@ -1652,22 +1671,29 @@
         <h2 class="section-h">What we see <em>on the lot</em>.</h2>
         <p class="lede no-cap">The Subaru BRZ moves quickly when units arrive. In our years selling Subarus in the Las Vegas valley, the BRZ is one of the few models where manual transmission cars sell as fast as automatics.</p>
 
-        <p>At delivery, our team inspects and verifies trim and transmission against the build sheet before the car hits the showroom floor. On the last batch in August, our team saw two manuals and one automatic.</p>
+        <figure class="section-image" style="margin:32px 0 28px;">
+          <div style="border-radius:12px;overflow:hidden;aspect-ratio:16/9;">
+            <img src="brz-hero.webp" alt="A black Subaru BRZ sport coupe on the showroom floor at Findlay Subaru of Las Vegas" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 50%;display:block;">
+          </div>
+          <figcaption>A Subaru BRZ on the showroom floor at Findlay Subaru of Las Vegas. Coupes turn quickly here, so we flag incoming BRZ allocations for buyers who tell us early which transmission they want.</figcaption>
+        </figure>
 
-        <p>Last month, a customer came in convinced the BRZ would feel cramped because it is a coupe. Our sales team had him sit in the driver's seat first before talking numbers. He found the seating position lower and more supportive than he expected, and the trunk deeper than the photos suggested.</p>
-
-        <p>He left to think it over, which keeps with our no-pressure pace. When he came back the following Saturday, our service team had already prepared the build sheet so the second visit took half the time.</p>
+        <ul class="bullets">
+          <li><strong>Checked before it reaches the floor.</strong> Our team verifies trim and transmission against the build sheet at delivery. The last August batch landed as two manuals and one automatic.</li>
+          <li><strong>Sit in it before you talk numbers.</strong> A recent buyer expected a coupe to feel cramped. The driver's seat changed his mind. It was lower and more supportive than he expected, with a deeper trunk than the photos suggest.</li>
+          <li><strong>No pressure to decide that day.</strong> He left to think it over. When he came back the following Saturday, the build sheet was already prepared, so the second visit took half the time.</li>
+        </ul>
 
         <blockquote class="pull">
-          Counterintuitively, the manual transmission is often the harder car to find, not the automatic. If a manual matters to you, tell us early so we can flag the next one that lands.
+          Counterintuitively, the manual transmission is often the harder car to find. If a manual matters to you, tell us early so we can flag the next one that lands.
           <cite>From the BRZ allocation desk</cite>
         </blockquote>
 
         <h3>Manual demand stays high</h3>
-        <p>Many buyers assume manuals sit unsold, but BRZ manual demand stays high among enthusiasts, so those cars tend to go first. If a manual matters to you, tell us early so we can flag the next one that lands.</p>
+        <p>BRZ manual demand stays high among enthusiasts, so those cars tend to go first. If a manual matters to you, tell us early so we can flag the next one that lands.</p>
 
         <h3>First-time Subaru buyers welcome</h3>
-        <p>We also see plenty of first-time Subaru buyers cross-shopping the BRZ against other brands' coupes. When that happens, our team walks them through Subaru's new-vehicle warranty coverage and the Subaru Certified Pre-Owned program, so they understand what backs the car after purchase.</p>
+        <p>First-time Subaru buyers often cross-shop the BRZ against other brands' coupes. We walk them through the new-vehicle warranty and the Certified Pre-Owned program, so they know what backs the car.</p>
 
         <!-- Manual vs Automatic quiz -->
         <div class="quiz" id="brz-quiz" aria-label="Manual or automatic BRZ quiz">
@@ -1720,8 +1746,10 @@
             <div class="quiz-result-lbl">Your match</div>
             <div class="quiz-result-name"></div>
             <p class="quiz-result-why"></p>
-            <a class="quiz-result-cta" href="#">See it in stock <span class="arrow">&rarr;</span></a>
-            <button type="button" class="quiz-restart">Start over</button>
+            <div class="quiz-result-actions">
+              <a class="quiz-result-cta" href="#">See it in stock <span class="arrow">&rarr;</span></a>
+              <button type="button" class="quiz-restart">Start over</button>
+            </div>
           </div>
         </div>
       </section>
@@ -1730,7 +1758,7 @@
       <section class="s" id="checklist">
         <div class="section-num"><span>04</span><span>Buyer's checklist</span></div>
         <h2 class="section-h">What to verify <em>before you buy a BRZ</em>.</h2>
-        <p class="lede no-cap">Buy with a checklist. A sport coupe rewards a careful look before signing.</p>
+        <p class="lede no-cap">Shop with a checklist. A sport coupe rewards a careful look before signing.</p>
 
         <div class="trims">
           <article class="trim">
@@ -1751,7 +1779,7 @@
           <article class="trim">
             <div class="engine-row"><span class="engine">VIN</span><span class="badge">Recalls &amp; pricing</span></div>
             <h4 class="name">Run the VIN and compare pricing</h4>
-            <p class="equip"><strong>Check the federal recall database</strong> at nhtsa.gov/recalls, and compare market pricing with a third-party tool like kbb.com or edmunds.com.</p>
+            <p class="equip"><strong>Check the federal recall database</strong> at nhtsa.gov/recalls, and ask our team to walk you through current pricing so you know exactly what you're comparing.</p>
           </article>
         </div>
 
@@ -1761,8 +1789,8 @@
           <li>Check the trim level against the window sticker and build sheet.</li>
           <li>Decide new versus Certified Pre-Owned. We are a Subaru CPO retailer.</li>
           <li>Review warranty coverage. Ask us to print the current Subaru warranty terms.</li>
-          <li>Run the VIN against the federal recall database at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a>.</li>
-          <li>Compare market pricing with a third-party tool like <a href="https://www.kbb.com" rel="noopener" target="_blank">kbb.com</a> or <a href="https://www.edmunds.com" rel="noopener" target="_blank">edmunds.com</a>.</li>
+          <li>Run the VIN against the federal recall database at nhtsa.gov/recalls.</li>
+          <li>Ask our team to walk you through current market pricing before you commit.</li>
         </ul>
 
         <p>For pricing, financing, and any current offers, we point you to our <a href="https://www.subaruoflasvegas.com/finance/">finance page</a> rather than printing numbers that change. Ask us for current offers before you decide.</p>
@@ -1772,7 +1800,7 @@
       <aside class="cta-inline" aria-labelledby="cta-inline-heading">
         <div class="eyebrow">Findlay Subaru of Las Vegas</div>
         <h3 id="cta-inline-heading">Find your BRZ before the next allocation sells.</h3>
-        <p class="lede no-cap">BRZ availability changes often because it is a low-volume sport coupe. Browse current stock, book a test drive, and tell us early if you want a manual, and we will flag the next one that arrives.</p>
+        <p class="lede no-cap">BRZ availability changes often because it is a low-volume sport coupe. See what is in stock, book a test drive, and tell us early if you want a manual, and we will flag the next one that arrives.</p>
         <div class="actions">
           <a class="btn primary" href="https://www.subaruoflasvegas.com/new-vehicles/">Browse new inventory <span class="arrow">→</span></a>
           <a class="btn ghost" href="https://www.subaruoflasvegas.com/contact-us/">Ask about incoming BRZs</a>
@@ -1792,8 +1820,8 @@
 
         <p>That means you can buy a BRZ during the week and bring it back for service the following Saturday without rearranging your schedule.</p>
 
-        <div class="spec-strip">
-          <div class="item"><a class="glink" href="https://www.google.com/search?q=findlay+subaru+las+vegas&amp;oq=findlay+sub&amp;gs_lcrp=EgZjaHJvbWUqDAgEEAAYQxiABBiKBTIGCAAQIxgnMgYIARBFGDkyBggCEEUYOzIICAMQRRgnGDsyDAgEEAAYQxiABBiKBTIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDk1NDFqMGo3qAIIsAIB8QVNhrjEVrjJgg&amp;sourceid=chrome&amp;source=chrome.ob&amp;ie=UTF-8#lrd=0x80c8c1378628aa99:0xc2547d3f82d3fabe,1,,,," target="_blank" rel="noopener" title="Opens the live Google listing - the review count there updates in real time"><div class="num">4.7<small> ★</small></div><div class="lbl">Dealer Google rating, 3,672 reviews</div></a></div>
+        <div class="spec-strip centered">
+          <div class="item"><div class="num">4.7<small> ★</small></div><div class="lbl">Dealer Google rating, 3,672 reviews</div></div>
           <div class="item"><div class="num">2023</div><div class="lbl">Love Promise Retailer of the Year</div></div>
           <div class="item"><div class="num">A<small> · 91/100</small></div><div class="lbl">CarEdge Transparency Grade</div></div>
           <div class="item"><div class="num">30<small>+</small></div><div class="lbl">Findlay dealerships, five states</div></div>
@@ -1802,34 +1830,34 @@
         <h3>A typical BRZ purchase, in order</h3>
         <ol class="steps">
           <li>
-            <h4>Browse current inventory</h4>
-            <p><a href="https://www.subaruoflasvegas.com/new-vehicles/">See what is in stock today</a>, or ask about used and Certified Pre-Owned BRZs through the <a href="https://www.subaruoflasvegas.com/contact-us/">contact page</a>.</p>
+            <h4>See what is in stock</h4>
+            <p>See what is in stock today, or ask about used and Certified Pre-Owned BRZs through the contact page.</p>
           </li>
           <li>
             <h4>Book a test drive</h4>
-            <p><a href="https://www.subaruoflasvegas.com/contact-us/">Request one through our contact page</a> and we will have the car ready.</p>
+            <p>Request one through our contact page and we will have the car ready.</p>
           </li>
           <li>
             <h4>Get a trade value</h4>
-            <p>Start at our <a href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/">trade appraisal page</a> if you have a car to sell.</p>
+            <p>Start at our trade appraisal page if you have a car to sell.</p>
           </li>
           <li>
             <h4>Line up financing</h4>
-            <p>Work the numbers at our <a href="https://www.subaruoflasvegas.com/finance/">finance page</a> before you arrive.</p>
+            <p>Work the numbers at our finance page before you arrive.</p>
           </li>
           <li>
             <h4>Take delivery</h4>
-            <p>Then schedule first service with our service team through the <a href="https://www.subaruoflasvegas.com/contact-us/">contact page</a>.</p>
+            <p>Then schedule first service with our service team through the contact page.</p>
           </li>
         </ol>
 
-        <p>We keep the conversation low-pressure. Our brand voice is meant to feel like a knowledgeable neighbor, not a salesperson chasing a quota.</p>
+        <p>We keep the conversation low-pressure. Our brand voice is meant to feel like a knowledgeable neighbor.</p>
 
         <figure class="section-image" style="margin:32px 0 28px;">
           <div style="border-radius:12px;overflow:hidden;aspect-ratio:16/9;">
             <img src="dealership-dusk.webp" alt="The Findlay Subaru of Las Vegas dealership at dusk, showroom lit and new Subarus out front at 6455 Roy Horn Way" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;">
           </div>
-          <figcaption>Findlay Subaru sits at 6455 Roy Horn Way off the I-215 Beltway, so most of the valley reaches the lot in under half an hour, and your BRZ comes back here for its first service.</figcaption>
+          <figcaption>We sit at 6455 Roy Horn Way off the I-215 Beltway, so most of the valley reaches the lot in under half an hour, and your BRZ comes back here for its first service.</figcaption>
         </figure>
 
         <div class="visit-card"><div class="visit-eyebrow">Visit us</div><div class="visit-grid"><div class="visit-col"><div class="visit-lbl">Address</div><div class="visit-val">6455 Roy Horn Way<br>Las Vegas, NV 89118</div><div class="visit-note">Off the I-215 Beltway</div></div><div class="visit-col"><div class="visit-lbl">Sales hours</div><div class="visit-val">Monday to Saturday, 8:00 AM to 8:00 PM</div><div class="visit-note">Closed Sunday · Phones rotate for call tracking, use the <a href="https://www.subaruoflasvegas.com/contact-us/">contact form</a></div></div></div><a class="visit-link" href="https://www.google.com/maps/dir/?api=1&amp;destination=6455+Roy+Horn+Way,+Las+Vegas,+NV+89118">Get directions <span class="arrow">&rarr;</span></a></div>
@@ -1868,9 +1896,9 @@
     <h2>Part of Findlay Automotive Group <em>since 1961</em>.</h2>
     <div class="band-cols">
       <div class="band-text">
-        <p class="band-deck">Findlay Automotive Group, founded 1961, is a family-owned group of more than 30 dealerships across Nevada, Arizona, Utah, Idaho, and Washington, the buying power of a large group with a neighborhood Subaru store's feel.</p>
-        <p class="band-deck">The same team that earns our 4.7★ reviews inspects each BRZ at delivery and verifies trim and transmission against the build sheet.</p>
-        <p class="band-deck band-deck-sm">That approach is why Subaru of America named us Love Promise Retailer of the Year in 2023, its recognition for retailers who live the principles of Honesty, Empathy, Appreciation, and Respect.</p>
+        <p class="band-deck">Findlay Automotive Group has been family-owned since 1961, giving you the buying power of a large group with a neighborhood Subaru store's feel.</p>
+        <p class="band-deck">The same team behind our 4.7★ reviews inspects every BRZ at delivery against its build sheet.</p>
+        <p class="band-deck band-deck-sm">That is why Subaru of America named us 2023 Love Promise Retailer of the Year, its award for Honesty, Empathy, Appreciation, and Respect.</p>
       </div>
       <div class="band-marks">
         <a class="mark" href="https://www.subaruoflasvegas.com/subaru-love-promise/" aria-label="Subaru Love Promise">
@@ -1939,7 +1967,7 @@
             <summary>Can I get a manual transmission BRZ?</summary>
             <div class="answer">
               <p>The BRZ is offered with manual and automatic transmissions. Manual examples often sell first because enthusiast demand stays high. Tell us early if you want a manual, and we will flag the next one that arrives.</p>
-              <p>Browse current stock at our <a href="https://www.subaruoflasvegas.com/new-vehicles/">new inventory page</a>.</p>
+              <p>See what is in stock on our <a href="https://www.subaruoflasvegas.com/new-vehicles/">new inventory page</a>.</p>
             </div>
           </details>
 
@@ -1947,14 +1975,14 @@
             <summary>What does the BRZ cost and are there any offers?</summary>
             <div class="answer">
               <p>Pricing and offers change, so we do not publish set numbers here. Ask us for current BRZ pricing and any available incentives, and check our <a href="https://www.subaruoflasvegas.com/finance/">finance page</a> for financing options.</p>
-              <p>You can also compare market values at <a href="https://www.kbb.com" rel="noopener" target="_blank">kbb.com</a> before you visit.</p>
+              <p>You can also ask our team to walk you through current market values before you visit.</p>
             </div>
           </details>
 
           <details>
             <summary>Should I buy a new or Certified Pre-Owned BRZ?</summary>
             <div class="answer">
-              <p>Both are options. A new BRZ carries the full Subaru new-vehicle warranty, while a Certified Pre-Owned BRZ goes through Subaru's CPO inspection and adds coverage. Findlay Subaru is a Subaru Certified Pre-Owned retailer.</p>
+              <p>Both are options. A new BRZ carries the full Subaru new-vehicle warranty, while a Certified Pre-Owned BRZ goes through Subaru's CPO inspection and adds coverage. We are a Subaru Certified Pre-Owned retailer.</p>
               <p>Ask our team to compare the two side by side.</p>
             </div>
           </details>
@@ -1962,7 +1990,7 @@
           <details>
             <summary>How do I check a used BRZ for recalls?</summary>
             <div class="answer">
-              <p>Run the vehicle's VIN through the federal recall lookup at <a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">nhtsa.gov/recalls</a>. It tells you whether any open safety recalls apply.</p>
+              <p>Run the vehicle's VIN through the federal recall lookup at nhtsa.gov/recalls. It tells you whether any open safety recalls apply.</p>
               <p>Our service team can also confirm recall status and complete any open recall work after purchase.</p>
             </div>
           </details>
@@ -2030,22 +2058,14 @@
         <h3>Sources &amp; references</h3>
         <p style="font-size:13px; color:var(--muted); line-height:1.55; margin: 0 0 6px; max-width:660px;">By the Findlay Subaru of Las Vegas team, reviewed by the <strong style="color:var(--ink-soft);">General Sales Manager</strong> · published September 2026.</p>
         <p style="font-size:13px; color:var(--muted); line-height:1.55; margin: 0 0 28px; max-width:660px;">BRZ availability, pricing, and offers change often because it is a low-volume sport coupe; we do not publish spec or price numbers that could go stale. Current Subaru specifications reflect Subaru USA publications, so verify current figures at subaru.com or with our team before you buy.</p>
-        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;">Findlay Subaru is an established Subaru dealership rated <a href="https://www.google.com/search?q=findlay+subaru+las+vegas&amp;oq=findlay+sub&amp;gs_lcrp=EgZjaHJvbWUqDAgEEAAYQxiABBiKBTIGCAAQIxgnMgYIARBFGDkyBggCEEUYOzIICAMQRRgnGDsyDAgEEAAYQxiABBiKBTIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDk1NDFqMGo3qAIIsAIB8QVNhrjEVrjJgg&amp;sourceid=chrome&amp;source=chrome.ob&amp;ie=UTF-8#lrd=0x80c8c1378628aa99:0xc2547d3f82d3fabe,1,,,," target="_blank" rel="noopener" title="Opens the live Google listing - the review count there updates in real time">4.7★ from 3,672 Google reviews</a> (live count), with a CarEdge Dealer Transparency Grade A (91/100), the Subaru Love Promise Retailer of the Year 2023 honor, and BBB accreditation since 2016. Part of Findlay Automotive Group, founded 1961.</p>
+        <p style="font-size:15px; color:var(--ink-soft); max-width:660px;">We are an established Subaru dealership rated <a href="https://www.google.com/search?q=findlay+subaru+las+vegas&amp;oq=findlay+sub&amp;gs_lcrp=EgZjaHJvbWUqDAgEEAAYQxiABBiKBTIGCAAQIxgnMgYIARBFGDkyBggCEEUYOzIICAMQRRgnGDsyDAgEEAAYQxiABBiKBTIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDk1NDFqMGo3qAIIsAIB8QVNhrjEVrjJgg&amp;sourceid=chrome&amp;source=chrome.ob&amp;ie=UTF-8#lrd=0x80c8c1378628aa99:0xc2547d3f82d3fabe,1,,,," target="_blank" rel="noopener" title="Opens the live Google listing - the review count there updates in real time">4.7★ from 3,672 Google reviews</a> (live count), with a CarEdge Dealer Transparency Grade A (91/100), the Subaru Love Promise Retailer of the Year 2023 honor, and BBB accreditation since 2016. Part of Findlay Automotive Group, founded 1961.</p>
 
         <h4 style="margin-top:28px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">Next steps</h4>
         <ul class="ext" style="margin-bottom:28px;">
-          <li><a href="https://www.subaruoflasvegas.com/new-vehicles/">Browse current BRZ inventory</a></li>
+          <li><a href="https://www.subaruoflasvegas.com/new-vehicles/">See BRZ inventory</a></li>
           <li><a href="https://www.subaruoflasvegas.com/finance/">Line up financing</a></li>
           <li><a href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/">Start a trade appraisal</a></li>
           <li><a href="https://www.subaruoflasvegas.com/contact-us/">Contact the sales team</a></li>
-        </ul>
-        <h4 style="margin-top:8px; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted);">Sources and references</h4>
-        <ul class="ext">
-          <li><a href="https://www.subaru.com" rel="noopener" target="_blank">Subaru USA · current BRZ specs, trims, and equipment</a></li>
-          <li><a href="https://www.fueleconomy.gov" rel="noopener" target="_blank">fueleconomy.gov · EPA mileage data</a></li>
-          <li><a href="https://www.nhtsa.gov/recalls" rel="noopener" target="_blank">NHTSA · federal VIN recall lookup</a></li>
-          <li><a href="https://www.kbb.com" rel="noopener" target="_blank">Kelley Blue Book · market pricing and trade-in values</a></li>
-          <li><a href="https://www.edmunds.com" rel="noopener" target="_blank">Edmunds · market pricing comparisons</a></li>
         </ul>
       </div>
       <div></div>
@@ -2057,7 +2077,7 @@
 <section class="closing-cta">
   <div class="wrap">
     <h2>Find your <em>Subaru BRZ</em> in Las Vegas.</h2>
-    <p>Browse current stock, book a test drive on Las Vegas roads, and tell us early if you want a manual. We will flag the next BRZ that lands and keep the conversation low-pressure.</p>
+    <p>See what is in stock, book a test drive on Las Vegas roads, and tell us early if you want a manual. We will flag the next BRZ that lands and keep the conversation low-pressure.</p>
     <div class="actions">
       <a class="btn primary" href="https://www.subaruoflasvegas.com/new-vehicles/">Browse new inventory <span class="arrow">→</span></a>
       <a class="btn ghost" href="https://www.subaruoflasvegas.com/finance/">Get financing</a>
@@ -2130,7 +2150,7 @@
       name.textContent="The automatic BRZ";
       img.src="dealership-dusk.webp";img.alt="The Findlay Subaru of Las Vegas dealership at dusk";
       why.textContent="Your driving leans toward daily miles, shared seat time, and stop-and-go traffic, where the automatic keeps the same rear-wheel-drive chassis without the clutch work. Ask our team what is on the lot now.";
-      cta.setAttribute("href","https://www.subaruoflasvegas.com/new-vehicles/");
+      cta.setAttribute("href","https://www.subaruoflasvegas.com/2026-subaru-brz-las-vegas-nv/");
       cta.firstChild.textContent="See the BRZ in stock ";
     }
   }
