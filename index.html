@@ -14,7 +14,7 @@
 <meta property="og:description" content="The Subaru BRZ rear-wheel-drive sport coupe, for sale at Findlay Subaru in Las Vegas. Trims, manual vs automatic, new vs Certified Pre-Owned, and a real test drive on Las Vegas roads." />
 <meta property="og:url" content="https://www.subaruoflasvegas.com/brz-for-sale-near-me-new/" />
 <meta property="og:site_name" content="Findlay Subaru of Las Vegas" />
-<meta property="og:image" content="brz.jpg" />
+<meta property="og:image" content="brz-hero-2026.jpg" />
 <meta property="og:image:width" content="1600" />
 <meta property="og:image:height" content="675" />
 <meta property="og:locale" content="en_US" />
@@ -27,14 +27,14 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="BRZ For Sale Near Me | Findlay Subaru Las Vegas" />
 <meta name="twitter:description" content="The Subaru BRZ rear-wheel-drive sport coupe, for sale at Findlay Subaru in Las Vegas. A real test drive on Las Vegas roads." />
-<meta name="twitter:image" content="brz.jpg" />
+<meta name="twitter:image" content="brz-hero-2026.jpg" />
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="https://dealerinspire-shared-assets.s3.amazonaws.com/public/oem/subaru/general/favicon.png" />
 <link rel="apple-touch-icon" href="https://dealerinspire-shared-assets.s3.amazonaws.com/public/oem/subaru/general/favicon.png" />
 
 <!-- Preload hero image for faster LCP -->
-<link rel="preload" as="image" href="brz.jpg" fetchpriority="high" />
+<link rel="preload" as="image" href="brz-hero-2026.jpg" fetchpriority="high" />
 
 <!-- JSON-LD: Article + AutoDealer + Vehicle Product + FAQPage + BreadcrumbList -->
 <script type="application/ld+json">
@@ -50,7 +50,7 @@
       "@id": "https://www.subaruoflasvegas.com/brz-for-sale-near-me-new/#article",
       "headline": "BRZ For Sale Near Me | Findlay Subaru Las Vegas",
       "description": "Searching BRZ for sale near me in Las Vegas points you to Findlay Subaru at 6455 Roy Horn Way. What to check before you buy a Subaru BRZ, how it fits next to other Subaru models, and how a local BRZ purchase works.",
-      "image": "brz.jpg",
+      "image": "brz-hero-2026.jpg",
       "datePublished": "2026-09-01T00:00:00-07:00",
       "dateModified": "2026-09-01T00:00:00-07:00",
       "author": {
@@ -1446,6 +1446,31 @@
   /* Quiz result: CTA left, Start over right */
   .quiz-result-actions { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .quiz-result-actions .quiz-restart { margin-top: 0; padding: 6px 2px; }
+
+  /* BRZ photo carousel (CSS scroll-snap) */
+  .carousel { margin: 24px 0 28px; }
+  .carousel-frame { position: relative; }
+  .carousel-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; border-radius: 12px; scrollbar-width: none; }
+  .carousel-track::-webkit-scrollbar { display: none; }
+  .carousel-slide { flex: 0 0 100%; scroll-snap-align: center; position: relative; }
+  .carousel-slide img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; border-radius: 12px; }
+  .carousel-slide .slide-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 34px 18px 14px; color: #fff; font-size: 13px; line-height: 1.45; background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.6) 100%); border-radius: 0 0 12px 12px; }
+  .carousel-slide .slide-cap span { display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.9; }
+  .carousel-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 40px; height: 40px; border-radius: 999px; border: none; background: rgba(255,255,255,.92); color: #16181d; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+  .carousel-nav:hover { background: #fff; }
+  .carousel-nav.prev { left: 12px; }
+  .carousel-nav.next { right: 12px; }
+  .carousel-nav svg { width: 20px; height: 20px; }
+  .carousel-dots { display: flex; gap: 8px; justify-content: center; margin-top: 14px; flex-wrap: wrap; }
+  .carousel-dots button { width: 8px; height: 8px; border-radius: 999px; border: none; padding: 0; background: #d8dde5; cursor: pointer; transition: width .2s, background .2s; }
+  .carousel-dots button[aria-current="true"] { background: #16181d; width: 22px; }
+  .carousel-caption { margin-top: 12px; font-size: 13px; line-height: 1.5; color: #6b7280; }
+  .carousel-caption strong { color: #2b303a; font-weight: 600; }
+  @supports not (aspect-ratio: 4 / 3) { .carousel-slide img { height: auto; } }
+  @media (max-width: 760px) {
+    .carousel-nav { width: 34px; height: 34px; }
+    .carousel-slide .slide-cap { font-size: 12px; padding: 28px 14px 12px; }
+  }
 </style>
 </head>
 <body>
@@ -1478,15 +1503,15 @@
     </div>
   </div>
 
-  <figure class="hero-photo full-bleed" role="img" aria-label="A gray Subaru BRZ tS sport coupe parked outdoors at golden hour, for sale at Findlay Subaru of Las Vegas">
+  <figure class="hero-photo full-bleed" role="img" aria-label="A silver Subaru BRZ sport coupe on a hillside road at sunset">
     <img class="scene"
-         src="brz.jpg"
-         alt="A gray Subaru BRZ tS rear-wheel-drive sport coupe parked on a tree-lined drive at golden hour, available at Findlay Subaru of Las Vegas"
+         src="brz-hero-2026.jpg"
+         alt="A silver Subaru BRZ sport coupe parked on a hillside road at sunset"
          loading="eager"
          fetchpriority="high"
-         width="1600"
-         height="675" />
-    <figcaption class="visually-hidden">The Subaru BRZ tS, a rear-wheel-drive two-door sport coupe, photographed at golden hour, for sale at Findlay Subaru of Las Vegas.</figcaption>
+         width="1920"
+         height="1012" />
+    <figcaption class="visually-hidden">The Subaru BRZ, a rear-wheel-drive two-door sport coupe, for sale at Findlay Subaru of Las Vegas.</figcaption>
   </figure>
 
 </header>
@@ -1656,26 +1681,87 @@
         </div>
 
         <p style="margin-top:32px;">We don't publish spec numbers here that could go stale. For current horsepower, fuel economy, and seating, check subaru.com or the EPA data at fueleconomy.gov. If you're cross-shopping SUVs, see our Subaru Forester and Subaru Crosstrek pages.</p>
-        <figure class="video-embed">
-          <div class="frame">
-            <iframe src="https://www.youtube-nocookie.com/embed/JTJKhMWRQTE" title="Subaru: The 2022 Subaru BRZ. Sports Car Purity, Subaru DNA" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <figure class="carousel" id="brz-carousel" aria-roledescription="carousel" aria-label="Subaru BRZ photo gallery">
+          <div class="carousel-frame">
+            <div class="carousel-track" tabindex="0">
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="1 of 18">
+                <img src="carousel/brz-01.jpg" width="1200" height="900" loading="lazy" alt="A black Subaru BRZ tS sport coupe photographed from the front on the showroom floor.">
+                <div class="slide-cap"><span>1 · Front view</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 of 18">
+                <img src="carousel/brz-02.jpg" width="1200" height="900" loading="lazy" alt="A black Subaru BRZ tS seen from the front and side, showing the wheels and lower body.">
+                <div class="slide-cap"><span>2 · Front three-quarter</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 of 18">
+                <img src="carousel/brz-03.jpg" width="1200" height="900" loading="lazy" alt="A black Subaru BRZ tS from the front left, doors closed, on the showroom floor.">
+                <div class="slide-cap"><span>3 · Driver side</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 of 18">
+                <img src="carousel/brz-04.jpg" width="1200" height="900" loading="lazy" alt="The side profile of a black Subaru BRZ tS two-door coupe.">
+                <div class="slide-cap"><span>4 · Side profile</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 of 18">
+                <img src="carousel/brz-05.jpg" width="1200" height="900" loading="lazy" alt="A black Subaru BRZ tS seen from the rear and side, showing the spoiler and tail lights.">
+                <div class="slide-cap"><span>5 · Rear three-quarter</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="6 of 18">
+                <img src="carousel/brz-06.jpg" width="1200" height="900" loading="lazy" alt="The rear of a black Subaru BRZ tS, showing the tail lights, spoiler and exhaust tips.">
+                <div class="slide-cap"><span>6 · Rear view</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="7 of 18">
+                <img src="carousel/brz-07.jpg" width="1200" height="900" loading="lazy" alt="The steering wheel and digital gauge cluster inside a Subaru BRZ tS.">
+                <div class="slide-cap"><span>7 · Driver display</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="8 of 18">
+                <img src="carousel/brz-08.jpg" width="1200" height="900" loading="lazy" alt="The centre console and infotainment screen inside a Subaru BRZ tS.">
+                <div class="slide-cap"><span>8 · Center console</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="9 of 18">
+                <img src="carousel/brz-09.jpg" width="1200" height="900" loading="lazy" alt="A close view of the infotainment screen inside a Subaru BRZ tS.">
+                <div class="slide-cap"><span>9 · Infotainment</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="10 of 18">
+                <img src="carousel/brz-10.jpg" width="1200" height="900" loading="lazy" alt="The six-speed manual shifter and handbrake inside a Subaru BRZ tS.">
+                <div class="slide-cap"><span>10 · Manual shifter</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="11 of 18">
+                <img src="carousel/brz-11.jpg" width="1200" height="900" loading="lazy" alt="The front sport seats inside a Subaru BRZ tS, with blue stitching.">
+                <div class="slide-cap"><span>11 · Front seats</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="12 of 18">
+                <img src="carousel/brz-12.jpg" width="1200" height="900" loading="lazy" alt="The rear seats inside a Subaru BRZ tS two-door coupe.">
+                <div class="slide-cap"><span>12 · Rear seats</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="13 of 18">
+                <img src="carousel/brz-13.jpg" width="1200" height="900" loading="lazy" alt="The driver door trim and armrest inside a Subaru BRZ tS.">
+                <div class="slide-cap"><span>13 · Door trim</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="14 of 18">
+                <img src="carousel/brz-14.jpg" width="1200" height="900" loading="lazy" alt="The driver door of a black Subaru BRZ tS held open on the showroom floor.">
+                <div class="slide-cap"><span>14 · Door open</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="15 of 18">
+                <img src="carousel/brz-15.jpg" width="1200" height="900" loading="lazy" alt="The dashboard and front cabin of a Subaru BRZ tS seen from the passenger side.">
+                <div class="slide-cap"><span>15 · Dashboard</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="16 of 18">
+                <img src="carousel/brz-16.jpg" width="1200" height="900" loading="lazy" alt="The 2.4-litre Boxer engine bay of a Subaru BRZ tS.">
+                <div class="slide-cap"><span>16 · Under the hood</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="17 of 18">
+                <img src="carousel/brz-17.jpg" width="1200" height="900" loading="lazy" alt="The open trunk of a Subaru BRZ tS with the cargo tray in place.">
+                <div class="slide-cap"><span>17 · Trunk space</span></div>
+              </div>
+              <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="18 of 18">
+                <img src="carousel/brz-18.jpg" width="1200" height="900" loading="lazy" alt="A cabin detail inside a Subaru BRZ tS.">
+                <div class="slide-cap"><span>18 · Cabin detail</span></div>
+              </div>
+            </div>
+            <button type="button" class="carousel-nav prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <button type="button" class="carousel-nav next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
           </div>
-          <figcaption class="vcap">Subaru&rsquo;s own introduction to the current-generation BRZ. It walks through the rear-wheel-drive layout, the low-mounted 2.4-liter Boxer engine, and the driving position. These are the things that separate the BRZ from the all-wheel-drive Subarus alongside it on our lot.</figcaption>
-        </figure>
-
-      </section>
-
-      <!-- §03 What we see on the lot -->
-      <section class="s" id="on-the-lot">
-        <div class="section-num"><span>03</span><span>From our showroom</span></div>
-        <h2 class="section-h">What we see <em>on the lot</em>.</h2>
-        <p class="lede no-cap">The Subaru BRZ moves quickly when units arrive. In our years selling Subarus in the Las Vegas valley, the BRZ is one of the few models where manual transmission cars sell as fast as automatics.</p>
-
-        <figure class="section-image" style="margin:32px 0 28px;">
-          <div style="border-radius:12px;overflow:hidden;aspect-ratio:16/9;">
-            <img src="brz-hero.webp" alt="A black Subaru BRZ sport coupe on the showroom floor at Findlay Subaru of Las Vegas" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 50%;display:block;">
-          </div>
-          <figcaption>A Subaru BRZ on the showroom floor at Findlay Subaru of Las Vegas. Coupes turn quickly here, so we flag incoming BRZ allocations for buyers who tell us early which transmission they want.</figcaption>
+          <div class="carousel-dots" role="tablist" aria-label="Choose photo"><button type="button" aria-label="Go to photo 1" aria-current="true"></button><button type="button" aria-label="Go to photo 2"></button><button type="button" aria-label="Go to photo 3"></button><button type="button" aria-label="Go to photo 4"></button><button type="button" aria-label="Go to photo 5"></button><button type="button" aria-label="Go to photo 6"></button><button type="button" aria-label="Go to photo 7"></button><button type="button" aria-label="Go to photo 8"></button><button type="button" aria-label="Go to photo 9"></button><button type="button" aria-label="Go to photo 10"></button><button type="button" aria-label="Go to photo 11"></button><button type="button" aria-label="Go to photo 12"></button><button type="button" aria-label="Go to photo 13"></button><button type="button" aria-label="Go to photo 14"></button><button type="button" aria-label="Go to photo 15"></button><button type="button" aria-label="Go to photo 16"></button><button type="button" aria-label="Go to photo 17"></button><button type="button" aria-label="Go to photo 18"></button></div>
+          <figcaption class="carousel-caption"><strong>A BRZ tS on our showroom floor.</strong> Swipe or use the arrows. Coupes turn quickly here, so ask early which transmission you want.</figcaption>
         </figure>
 
         <ul class="bullets">
@@ -2083,11 +2169,6 @@
       <a class="btn ghost" href="https://www.subaruoflasvegas.com/finance/">Get financing</a>
       <a class="btn ghost" href="https://www.subaruoflasvegas.com/guaranteed-trade-in-program-iframe/">Start a trade appraisal</a>
     </div>
-    <div class="visit">
-      <span>Contact<strong><a href="https://www.subaruoflasvegas.com/contact-us/" style="color:inherit;text-decoration:none;">Contact form</a></strong></span>
-      <span>Inventory<strong><a href="https://www.subaruoflasvegas.com/new-vehicles/" style="color:inherit;text-decoration:none;">New inventory</a></strong></span>
-      <span>Visit<strong><a href="https://maps.google.com/?q=6455+Roy+Horn+Way+Las+Vegas+NV+89118" rel="noopener" style="color:inherit;text-decoration:none;">6455 Roy Horn Way</a></strong></span>
-    </div>
   </div>
 </section>
 
@@ -2157,6 +2238,45 @@
   quiz.querySelector(".quiz-restart").addEventListener("click",function(){
     cur=0;score={m:0,a:0};result.hidden=true;body.hidden=false;show(0);
   });
+})();
+</script>
+
+<script>
+(function () {
+  var root = document.getElementById('brz-carousel');
+  if (!root) return;
+  var track = root.querySelector('.carousel-track');
+  var slides = root.querySelectorAll('.carousel-slide');
+  var dots = root.querySelectorAll('.carousel-dots button');
+  var prev = root.querySelector('.carousel-nav.prev');
+  var next = root.querySelector('.carousel-nav.next');
+  var index = 0;
+  function sync() {
+    dots.forEach(function (d, n) { d.setAttribute('aria-current', n === index ? 'true' : 'false'); });
+    prev.style.visibility = index === 0 ? 'hidden' : 'visible';
+    next.style.visibility = index === slides.length - 1 ? 'hidden' : 'visible';
+  }
+  function go(i) {
+    index = Math.max(0, Math.min(slides.length - 1, i));
+    track.scrollTo({ left: slides[index].offsetLeft - track.offsetLeft, behavior: 'smooth' });
+    sync();
+  }
+  prev.addEventListener('click', function () { go(index - 1); });
+  next.addEventListener('click', function () { go(index + 1); });
+  dots.forEach(function (d, n) { d.addEventListener('click', function () { go(n); }); });
+  var raf;
+  track.addEventListener('scroll', function () {
+    if (raf) cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(function () {
+      var nearest = Math.round(track.scrollLeft / slides[0].offsetWidth);
+      if (nearest !== index) { index = nearest; sync(); }
+    });
+  });
+  track.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); go(index - 1); }
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(index + 1); }
+  });
+  sync();
 })();
 </script>
 </body>
