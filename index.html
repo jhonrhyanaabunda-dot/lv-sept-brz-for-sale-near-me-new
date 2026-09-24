@@ -1113,7 +1113,7 @@
   /* ---------- Video embed (independent review) ---------- */
   .video-embed{margin:32px 0 40px}
   .video-embed .frame{position:relative;aspect-ratio:16/9;border-radius:var(--radius-md);overflow:hidden;background:var(--ink)}
-  .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .video-embed iframe,.video-embed video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover;background:var(--ink)}
   .video-embed .vcap{font-size:13px;color:var(--muted);line-height:1.5;margin:12px 0 0;padding-left:14px;border-left:3px solid var(--blue)}
 
   /* ---------- Lot carousel (real dealer photos) + offer ---------- */
@@ -1587,6 +1587,13 @@
         <h2 class="section-h">BRZ vs other Subaru models: <em>how to choose</em>.</h2>
         <p class="lede no-cap">Every Subaru comes with all-wheel drive, except one. The BRZ is rear-wheel drive by design, which keeps weight down and steering sharp.</p>
 
+        <figure class="section-image" style="margin:32px 0 28px;">
+          <div style="border-radius:12px;overflow:hidden;aspect-ratio:16/9;">
+            <img src="brz-blue.jpg" alt="A blue Subaru BRZ sport coupe parked on an open concrete lot" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;">
+          </div>
+          <figcaption>The BRZ is the one Subaru that sends its power to the rear wheels instead of all four.</figcaption>
+        </figure>
+
         <p>If you want a sporty Subaru with AWD instead, our Subaru WRX would fit you better. The comparison below frames the BRZ against two common in-brand cross-shops.</p>
 
         <!-- Desktop: comparison table -->
@@ -1681,6 +1688,16 @@
         </div>
 
         <p style="margin-top:32px;">We don't publish spec numbers here that could go stale. For current horsepower, fuel economy, and seating, check subaru.com or the EPA data at fueleconomy.gov. If you're cross-shopping SUVs, see our Subaru Forester and Subaru Crosstrek pages.</p>
+
+        <figure class="video-embed">
+          <div class="frame">
+            <video controls preload="none" playsinline crossorigin="anonymous" width="560" height="315" poster="https://s3.amazonaws.com/subarumedia.iconicweb.com/mediasite/video/114961/15392.jpg?v.279">
+              <source src="https://s3.amazonaws.com/subarumedia.iconicweb.com/mediasite/video/114960/hq_15392.mp4?v.84" type="video/mp4" />
+              Your browser cannot play this video.
+            </video>
+          </div>
+          <figcaption class="vcap">Subaru&rsquo;s own film on the current BRZ. It walks through the rear-wheel-drive layout and the low-mounted 2.4-liter Boxer engine, and it shows the driving position that separates the BRZ from the all-wheel-drive Subarus parked beside it on our lot.</figcaption>
+        </figure>
         <figure class="carousel" id="brz-carousel" aria-roledescription="carousel" aria-label="Subaru BRZ photo gallery">
           <div class="carousel-frame">
             <div class="carousel-track" tabindex="0">
@@ -1903,6 +1920,13 @@
         <div class="section-num"><span>05</span><span>Visit us</span></div>
         <h2 class="section-h">How a local BRZ purchase works <em>at Findlay Subaru</em>.</h2>
         <p class="lede no-cap">Our sales hours are Monday through Saturday, 8:00 AM to 8:00 PM, and we are closed Sunday. Service and parts run Monday through Friday, 7:00 AM to 6:00 PM, and Saturday, 7:00 AM to 5:00 PM.</p>
+
+        <figure class="section-image" style="margin:32px 0 28px;">
+          <div style="border-radius:12px;overflow:hidden;aspect-ratio:16/9;">
+            <img src="brz-yellow.jpg" alt="A yellow Subaru BRZ sport coupe photographed indoors against a metal wall" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center 50%;display:block;">
+          </div>
+          <figcaption>Colors and trims sell quickly on a low-volume coupe. Tell us early which one you want, and we'll flag the next car that lands.</figcaption>
+        </figure>
 
         <p>That means you can buy a BRZ during the week and bring it back for service the following Saturday without rearranging your schedule.</p>
 
